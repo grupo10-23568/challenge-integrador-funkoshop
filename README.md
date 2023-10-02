@@ -1,6 +1,6 @@
-# challenge-integrador-funkoshop
+# Challenge Integrador Funkoshop
 
-## Proyecto Challenge Integrador Funkoshop Codo a Codo 2023
+## Proyecto Final Codo a Codo 2023
 
 El objetivo de este proyecto es contar con un espacio autodidacta y autogestionado que le permita al estudiante consolidar el proceso de aprendizaje de los temas vistos a lo largo de la cursada a través de la práctica con un fin común y particular. 
 El proyecto reviste carácter obligatorio y se realizará de forma grupal. 
