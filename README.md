@@ -25,7 +25,7 @@ Para lograr este objetivo, deberás utilizar las siguientes
 - MySQL y Gestores de BBDD
 - Sequelize
 
-## Nota para el equipo:
+## 👁️✍️Nota para el equipo:
 
 Para que todos los enlaces se mantengan equivalentes:
 
