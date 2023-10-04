@@ -29,7 +29,7 @@ Para lograr este objetivo, deberás utilizar las siguientes
 
 Para que todos los enlaces se mantengan equivalentes:
 
-- La carpeta de imágenes deberán llamarse 'img'.
-- La carpeta de estilos se llamará 'css' y contendrá las subcarpetas 'components' y 'pages'
-- La carpeta de scripts se llamará `js`.
-- La carpeta contenedora de archivos html se llamará 'pages' y contendrá las subcarpetas 'admin' y 'shop'.
+- La carpeta de imágenes llama `img`.
+- La carpeta de estilos se llama `css` y contiene las subcarpetas `components` y `pages`
+- La carpeta de scripts se llama `js`.
+- La carpeta contenedora de archivos html se llama `pages` y contiene las subcarpetas `admin` y `shop`.
