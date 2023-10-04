@@ -2,8 +2,8 @@
 
 ## Proyecto Final Codo a Codo 2023
 
-El objetivo de este proyecto es contar con un espacio autodidacta y autogestionado que le permita al estudiante consolidar el proceso de aprendizaje de los temas vistos a lo largo de la cursada a través de la práctica con un fin común y particular. 
-El proyecto reviste carácter obligatorio y se realizará de forma grupal. 
+El objetivo de este proyecto es contar con un espacio autodidacta y autogestionado que le permita al estudiante consolidar el proceso de aprendizaje de los temas vistos a lo largo de la cursada a través de la práctica con un fin común y particular.
+El proyecto reviste carácter obligatorio y se realizará de forma grupal.
 Dentro del alcance de este proyecto se fomenta la interacción y ayuda entre pares como focos de consulta a fin de potenciarse como equipo durante todo su desarrollo
 
 ## Consigna
@@ -12,7 +12,7 @@ El sitio consta de 2 partes fundamentales. En primer lugar, la tienda en línea 
 
 Para lograr este objetivo, deberás utilizar las siguientes
 
-## 🖥️🔨Tecnologías y Herramientas:
+## 🖥️🔨Tecnologías y Herramientas
 
 - FIGMA
 - HTML
@@ -25,7 +25,7 @@ Para lograr este objetivo, deberás utilizar las siguientes
 - MySQL y Gestores de BBDD
 - Sequelize
 
-## 👁️✍️Nota para el equipo:
+## 👁️✍️Nota para el equipo
 
 Para que todos los enlaces se mantengan equivalentes:
 
