@@ -1,0 +1,44 @@
+/* Reset Navegadores */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--font-inter);
+    font-size: 62.5%;
+    color: var(--negro);
+}
+
+a {
+    text-decoration: none;
+    font-family: inherit;
+    color: inherit;
+}
+
+header,
+footer {
+    font-family: var(--font-raleway);
+    color: var(--blanco);
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+p {
+    font-size: var(--font-16-small);
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    width: clamp(260px, 90%, 1280px);
+    margin: 0 auto;
+}

@@ -149,6 +149,7 @@
             <ul class="navbar__item">
                 <li class="navbar__item"><a class="navbar__link" href="pages/shop/shop.html">SHOP</a></li>
                 <li class="navbar__item"><a class="navbar__link" href="pages/admin/login.html">INGRESAR</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="pages/admin/register.html">REGISTRARSE</a></li>
                 <li class="navbar__item"><a class="navbar__link" href="mailto:contacto@funkoshop.com">CONTACTO</a></li>
             </ul>
             <picture>
@@ -163,14 +164,24 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
 
-    <!-- ================ INICIO SLIDER ================ -->
-
     <script>
-
+        new Glide('.glide',
+            {
+                type: 'carousel',
+                startAt: 0,
+                perView: 3,
+                gap: 30,
+                breakpoints: {
+                    991: {
+                        perView: 2
+                    },
+                    768: {
+                        perView: 1
+                    }
+                }
+            }
+        ).mount();
     </script>
-
-    <!-- ================ FIN SLIDER ================ -->
-
 </body>
 
 </html>
