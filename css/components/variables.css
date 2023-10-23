@@ -1,0 +1,46 @@
+:root {
+    /* COLORES */
+    --magenta: rgb(255, 22, 84);
+
+    --rojo: rgb(255, 51, 51);
+    --rojo-90: rgba(255, 51, 51, 0.9);
+    --rojo-50: rgba(255, 51, 51, 0.5);
+    --rojo-70: rgba(255, 51, 51, 0.7);
+
+    --azul: rgb(29, 132, 181);
+    --azul-70: rgba(29, 132, 181, 0.7);
+
+    --negro: rgb(31, 31, 31);
+    --negro-50: rgba(31, 31, 31, 0.5);
+    --negro-30: rgba(31, 31, 31, 0.3);
+
+    --fondo-oscuro: rgb(48, 52, 63);
+    --fondo-claro: rgb(250, 250, 255);
+    --blanco: #ffffff;
+
+    /* FAMILIAS DE FUENTES */
+    --font-inter: 'Inter', sans-serif;
+    --font-raleway: 'Raleway', sans-serif;
+
+    /* TAMAÑOS DE FUENTES */
+    --font-46-display: 4.6em;
+    --font-38-jumbo: 3.8em;
+    --font-30-xlarge: 3em;
+    --font-24-large: 2.4em;
+    --font-20-special: 2em;
+    --font-18-medium: 1.8em;
+    --font-16-small: 1.6em;
+    --font-14-xsmall: 1.4em;
+    --font-12-xxsmall: 1.2em;
+
+    /* ESPACIADOS */
+    --spacing-128: 12.8rem;
+    --spacing-68: 6.8rem;
+    --spacing-36: 3.6rem;
+    --spacing-28: 2.8rem;
+    --spacing-24: 2.4rem;
+    --spacing-20: 2.0rem;
+    --spacing-16: 1.6rem;
+    --spacing-12: 1.2rem;
+    --spacing-8: 0.8rem;
+}
