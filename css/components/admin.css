@@ -1,0 +1,101 @@
+main.admin {
+    font-family: var(--font-inter);
+    min-height: 75vh;
+}
+
+.createdit__title {
+    display: inline;
+    font-family: var(--font-raleway);
+    font-weight: 700;
+    font-size: var(--font-38-jumbo);
+}
+
+.block__data {
+    margin-bottom: var(--spacing-36);
+}
+
+.admin__main {
+    margin: var(--spacing-36) auto;
+}
+
+.listado__head {
+    margiN: var(--spacing-36) 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.listado__title {
+    font-size: var(--font-30-xlarge);
+    font-weight: bold;
+}
+
+
+.listado__add {
+    display: flex;
+    align-items: center;
+}
+
+.listado__add h2 {
+    font-weight: 700;
+}
+
+.listado__add--icon {
+    color: var(--rojo);
+    font-size: var(--font-38-jumbo);
+    padding: 0 var(--spacing-20);
+}
+
+.listado__add--icon:hover {
+    color: var(--rojo-70);
+}
+
+.table {
+    font-size: var(--font-18-medium);
+}
+
+.td__icon--edit,
+.td__icon--delete {
+    cursor: pointer;
+}
+
+.td__icon--edit {
+    color: var(--azul);
+}
+
+.td__icon--delete {
+    color: var(--rojo);
+}
+
+.td__icon--edit:hover {
+    color: var(--azul-70)
+}
+
+.td__icon--delete:hover {
+    color: var(--rojo-70)
+}
+
+th.id {
+    font-weight: 500;
+}
+
+.btn__borrar--item,
+.btn__edit--item {
+    border: none;
+    background-color: transparent;
+
+}
+
+/* PAGINA EDIT */
+.edit__img {
+    max-width: 150px;
+    padding-bottom: var(--spacing-8);
+}
+
+.edit__img--side {
+    font-size: var(--font-small);
+    text-align: center;
+    padding-top: var(--spacing-8);
+    border-top: 2px solid var(--primary-solid);
+    font-weight: 600;
+}

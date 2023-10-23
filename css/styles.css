@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Raleway:wght@100;300;400;500;600;700;900&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css');
+@import url('https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css');
+
+/* Variables */
+@import url('components/variables.css');
+
+/* Reset Navegadores */
+@import url('components/reset.css');
+
+/* Componentes Sliders / Cards Ultimos Lanzamientos & Productos Relacionados */
+@import url('components/slider.css');
+
+/* Componentes Header y Footer */
+@import 'components/header.css';
+@import 'components/footer.css';
+
+/* Página Items */
+@import 'pages/items.css';
+
+/* Página Shop */
+@import 'pages/shop.css';
+
+/* Página Admin */
+@import 'pages/admin.css';
+
+
+/* Página Login */
+@import 'pages/login.css';
+
+/* Página Register */
+@import 'pages/register.css';
+
+/* Componentes Forms */
+@import 'components/forms.css';
+
+/* Página Cart */
+@import 'pages/cart.css';
+
+
+/* INDEX */
+/* Hero */
+.hero {
+    background-image: url("../img/funkos-banner.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: var(--spacing-128) 0;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(2px) brightness(.7);
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-20);
+    align-items: start;
+    z-index: 2;
+    position: relative;
+}
+
+.hero__title {
+    font-family: var(--font-raleway);
+    font-size: var(--font-38-jumbo);
+    color: var(--blanco);
+}
+
+.hero__text {
+    font-family: var(--font-raleway);
+    font-size: var(--font-18-medium);
+    color: var(--blanco);
+}
+
+.hero__link {
+    display: inline-block;
+    font-size: var(--font-18-medium);
+    background-color: var(--fondo-claro);
+    padding: var(--spacing-12) var(--spacing-68);
+    border-radius: 50px;
+    font-weight: 500;
+    transition: background-color .3s ease-in-out;
+}
+
+.hero__link:hover {
+    background-color: var(--rojo-90);
+    color: var(--fondo-claro);
+}
+
+/* Colecciones */
+.collection {
+    margin: var(--spacing-28) 0;
+    align-items: center;
+    padding: var(--spacing-16) 0;
+}
+
+.collection:nth-child(even) .collection__cover {
+    order: -1;
+}
+
+.collection__content {
+    display: flex;
+    flex-direction: column;
+    /* gap: var(--spacing-24); */
+    align-items: start;
+}
+
+.collection__title {
+    font-family: var(--font-raleway);
+    font-size: var(--font-46-display);
+    font-weight: 500;
+}
+
+.collection__text {
+    display: flex;
+    font-family: var(--font-raleway);
+    font-size: var(--font-24-large);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.collection__hr {
+    border: none;
+    border: 2px solid var(--rojo);
+    opacity: 1;
+}
+
+.collection__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 292px;
+    height: 65px;
+    font-family: var(--font-inter);
+    font-size: var(--font-24-large);
+    background-color: var(--fondo-oscuro);
+    color: var(--blanco);
+    border-radius: var(--spacing-68);
+    text-transform: uppercase;
+    margin-top: var(--spacing-20);
+    transition: background-color .3s ease-in-out;
+}
+
+.collection__link:hover {
+    background-color: var(--rojo-90);
+}
+
+/* Media queries */
+@media (max-width:768px) {
+    .collection:nth-child(1) .collection__cover {
+        order: -1;
+    }
+
+    .collection:nth-child(3) .collection__cover {
+        order: -1;
+    }
+
+    .cart__card--titles {
+        display: none;
+    }
+
+    .cart__card--prod {
+        padding: 0 var(--spacing-36) var(--spacing-36);
+    }
+
+}
+
+@media (min-width:769px) {
+    .cart__card--prod {
+        padding: var(--spacing-24) 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .cart__card--prod {
+        padding: 0 var(--spacing-16)
+    }
+}
