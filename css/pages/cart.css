@@ -1,0 +1,237 @@
+button {
+    cursor: pointer;
+}
+
+.cart-main {
+    margin: 40px 0;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.cart {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart h2,
+.resume-cart h2 {
+    color: #111;
+    font-family: var(--font-raleway);
+    font-size: var(--font-46-display);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    border-bottom: 5px solid var(--rojo);
+    width: max-content;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--spacing-16);
+    height: 51px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    background: var(--fondo-claro);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    color: #000;
+    font-size: var(--font-16-small);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.info p:first-child {
+    max-width: 381px;
+    width: 100%;
+    text-align: center;
+}
+
+.info p:nth-child(2) {
+    max-width: 115px;
+    width: 100%;
+    text-align: center;
+}
+
+.info p:nth-child(3) {
+    max-width: 200px;
+    width: 100%;
+    text-align: center;
+}
+
+.info p:last-child {
+    color: var(--fondo-claro);
+    max-width: 28px;
+    width: 100%;
+}
+
+.cart-item {
+    display: flex;
+    height: 195px;
+    padding: var(--spacing-16);
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 25px;
+    background: var(--fondo-claro);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.cart-item div {
+    display: flex;
+    align-items: center;
+    width: 381.09px;
+    max-width: 100%;
+}
+
+.cart-item picture {
+    max-width: 118px;
+    width: 100%;
+}
+
+.cart-item article {
+    font-style: normal;
+    line-height: normal;
+}
+
+.cart-item article h3 {
+    color: #111;
+    font-size: var(--font-24-large);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.cart-item article p {
+    color: #333;
+    font-size: var(--font-14-xsmall);
+    font-weight: 500;
+}
+
+.cart-item article p:last-child {
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+.cart-item .quantity {
+    display: flex;
+    gap: 10px;
+    width: 100px;
+}
+
+.cart-item .quantity input {
+    width: 89.479px;
+    height: 40px;
+    text-align: center;
+    appearance: none;
+    border: 0.5px solid #c9c9c9;
+    background: var(--blanco);
+    color: #000;
+    font-size: var(--font-20-special);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.cart-item .buttons {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.more, .less {
+    width: 16px;
+    height: 16px;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--rojo);
+    color: var(--blanco);
+    font-style: bold;
+}
+
+.more:active, .less:active {
+    background-color: rgb(160, 32, 0);
+}
+
+.price {
+    width: 200px;
+    color: #333;
+    font-size: var(--font-20-special);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.cart-item .remove {
+    flex-shrink: 0;
+    background-color: var(--fondo-claro);
+    border: none;
+}
+
+.resume-cart {
+    display: flex;
+    gap: 30px;
+    align-items: end;
+    flex-direction: column;
+}
+
+.resume-cart table {
+    padding: var(--spacing-24);
+    border-radius: 10px;
+    background: var(--fondo-claro);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 572px;
+}
+
+.resume-cart tbody {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.resume-cart tr {
+    display: flex;
+    justify-content: space-between;
+}
+
+.resume-cart td {
+    color: #000;
+    font-size: var(--font-16-small);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.resume-cart td:last-child {
+    color: #747474;
+    font-weight: 700;
+}
+
+.resume-cart input {
+    width: 100%;
+    max-width: 572px;
+    height: 68.656px;
+    flex-shrink: 0;
+    appearance: none;
+    background-color: var(--rojo-70);
+    border: none;
+    cursor: pointer;
+    color: var(--blanco);
+    font-size: var(--font-30-xlarge);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    transition: background 300ms;
+}
+
+.resume-cart input:hover {
+    background-color: var(--rojo);
+}
