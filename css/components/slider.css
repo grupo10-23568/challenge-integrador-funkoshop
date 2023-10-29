@@ -81,9 +81,17 @@
 }
 
 iconify-icon {
-    color: var(--negro-30);
-    font-size: var(--font-18-medium);
+    color: var(--fondo-claro);
+    font-size: var(--font-16-small);
     font-weight: 700;
+}
+
+iconify-icon.icon {
+    color: var(--fondo-oscuro);
+}
+
+iconify-icon.icon:hover {
+    color: var(--color-negro-30);
 }
 
 /* Animacion */
