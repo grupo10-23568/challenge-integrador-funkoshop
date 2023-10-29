@@ -1,0 +1,23 @@
+/* Inicio FORM ADMIN */
+
+.form__admin {
+    margin-top: var(--spacing-28);
+    display: flex;
+    align-items: center;
+}
+
+.search__icon {
+    /* color: var(--fondo-oscuro); */
+    font-size: var(--font-30-xlarge);
+}
+
+.search__input {
+    width: 35%;
+    border: 2px solid var(--fondo-oscuro);
+    border-radius: 5px;
+    font-size: var(--font-16-small);
+    font-family: var(--font-inter);
+    padding: var(--spacing-8) var(--spacing-16);
+}
+
+/* Fin FORM ADMIN */
