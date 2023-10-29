@@ -86,6 +86,14 @@ iconify-icon {
     font-weight: 700;
 }
 
+iconify-icon.icon {
+    color: var(--fondo-oscuro);
+}
+
+iconify-icon.icon:hover {
+    color: var(--color-negro-30);
+}
+
 /* Animacion */
 @keyframes fade {
     0% {
