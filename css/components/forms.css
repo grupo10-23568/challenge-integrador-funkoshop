@@ -20,4 +20,124 @@
     padding: var(--spacing-8) var(--spacing-16);
 }
 
-/* Fin FORM ADMIN */
+/* =============== Fin FORM ADMIN ============== */
+
+/* =============== Inicio FORM REGISTER ============== */
+
+.register__form {
+    width: clamp(250px, 100%, 450px);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    gap: var(--spacing-28);
+}
+
+/* =============== ¡QUITAR CUANDO ESTE CSS DE LOGIN SUBIDO! ============== */
+.login__title {
+    font-family: var(--font-raleway);
+    font-weight: 700;
+    text-align: center;
+    font-size: var(--font-38-jumbo);
+    letter-spacing: 1px;
+}
+
+/* ======================================================================= */
+
+/* =============== Fin FORM REGISTER ============== */
+
+/* =============== inicio FORM LOGIN ============== */
+.login__form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    gap: var(--spacing-28);
+}
+
+.login__box .form__link {
+    font-size: var(--font-small);
+    text-align: center;
+}
+
+.form__item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: var(--spacing-16);
+}
+
+.form__label {
+    font-family: var(--font-inter);
+    font-size: var(--font-24-large);
+    font-weight: 400;
+}
+
+.form__input {
+    border: none;
+    border-bottom: 2px solid var(--rojo);
+    font-size: var(--font-18-medium);
+    margin: 0 var(--spacing-12);
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+.form__input:focus {
+    outline: none;
+}
+
+.form__input#password,
+.form__input#repeat-password {
+    font-size: var(--font-24-large);
+}
+
+.form__submit {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-36);
+    justify-content: center;
+    margin: var(--spacing-16) 0;
+}
+
+.form__btn {
+    width: 103px;
+    height: 39px;
+    background-color: var(--rojo);
+    border: none;
+    color: var(--fondo-claro);
+    font-size: var(--font-14-xsmall);
+    border-radius: 0;
+    transition: background-color .3s ease;
+}
+
+.form__btn:hover {
+    background-color: var(--rojo-70);
+}
+
+.checkbox__label--login {
+    font-family: var(--font-inter);
+    font-size: var(--font-18-medium);
+    font-weight: 400;
+    padding-left: 4px;
+}
+
+.form-check-login {
+    width: var(--spacing-16);
+    height: var(--spacing-16);
+    border: 2px solid var(--fondo-oscuro);
+    border-radius: 3px;
+}
+
+.form__lost {
+    text-align: center;
+    color: var(--azul);
+    font-size: var(--font-16-small);
+}
+
+.form__lost:hover {
+    color: var(--azul-70);
+}
+
+/* =============== Fin FORM LOGIN ============== */
