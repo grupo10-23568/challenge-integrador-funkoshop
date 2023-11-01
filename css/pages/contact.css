@@ -35,3 +35,11 @@
 .contact__button:hover {
     background-color: var(--rojo-70);
 }
+
+a:link {
+    text-decoration: none;    
+   }
+
+   a.submenu__link{
+    color: var(--color-claro);
+   }
