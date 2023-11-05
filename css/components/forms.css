@@ -141,3 +141,89 @@ input:focus::placeholder {
 }
 
 /* =============== Fin FORM LOGIN ============== */
+
+/* =============== Inicio SHOP FORMS ============== */
+
+.shop__form {
+    font-family: var(--font-inter);
+}
+
+.forms__earch--item input,
+.form__search--item select {
+    font-size: var(--font-18-medium);
+    display: flex;
+    align-items: center;
+}
+
+.checkbox__content {
+    padding: var(--spacing-20);
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox__label {
+    font-size: var(--font-18-medium);
+    padding-left: var(--spacing-8);
+}
+
+.form-check-input {
+    width: var(--spacing-24);
+    height: var(--spacing-24);
+    border: 2px solid var(--fondo-oscuro);
+}
+
+.form-select-lg {
+    border: 2px solid var(--fondo-oscuro);
+}
+
+.search__icon {
+    color: #30343f;
+    width: 40px;
+    height: 40px;
+}
+
+.shop__form {
+    border-bottom: 1px dotted var(--negro-30);
+}
+
+.form__search {
+    padding: 68px 0;
+    width: clamp(250px, 250px, 100%);
+    margin: auto;
+}
+
+.formsearch--item {
+    gap: var(--spacing-16);
+}
+
+.label__shop {
+    font-size: var(--font-24-large);
+    font-weight: 600;
+}
+
+.precio {
+    margin: var(--spacing-16) 0;
+}
+
+.precio label {
+    font-weight: 600;
+    font-size: var(--font-14-xsmall);
+    padding-right: 10px;
+}
+
+.precio span {
+    padding: 0 8px;
+    font-size: var(--font-16-small);
+}
+
+.precio input {
+    border: 2px solid var(--fondo-oscuro);
+    border-radius: 5px;
+    font-size: var(--font-18-medium);
+    text-align: center;
+}
+
+/* =============== Fin SHOP FORMS ============== */
