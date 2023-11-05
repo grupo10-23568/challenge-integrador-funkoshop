@@ -175,6 +175,10 @@ input:focus::placeholder {
     border: 2px solid var(--fondo-oscuro);
 }
 
+.form-check-input[type=checkbox] {
+    border-radius: 6px;
+}
+
 .form-select-lg {
     border: 2px solid var(--fondo-oscuro);
 }
@@ -226,4 +230,76 @@ input:focus::placeholder {
     text-align: center;
 }
 
+.btn-create {
+    width: 175px;
+    height: 45px;
+    transition: background-color .3s ease;
+}
+
+.btn-create:hover {
+    color: var(--fondo-claro);
+    background-color: var(--rojo-70);
+}
+
+.discount {
+    width: 50px;
+}
+
+.createdit__files {
+    margin-bottom: var(--spacing-24);
+}
+
+
 /* =============== Fin SHOP FORMS ============== */
+
+/* =============== Inicio EDIT-CREATE ============== */
+
+.createdit__form {
+    font-family: var(--font-inter);
+    max-width: 850px;
+}
+
+.form__cat-lic {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-36);
+    padding: var(--spacing-28) 0;
+}
+
+.form__select {
+    width: 243px;
+    height: 44px;
+    flex-shrink: 0;
+    font-size: var(--font-18-medium);
+}
+
+.form__flex {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-16);
+}
+
+.form__files {
+    font-size: var(--font-14-xsmall);
+}
+
+.createdit__input {
+    width: 280px;
+}
+
+.form__textarea--createdit {
+    width: 100%;
+    margin: var(--spacing-28) 0;
+    border: 1px solid var(--fondo-oscuro);
+    font-family: inherit;
+    font-size: var(--font-18-medium);
+    padding: var(--spacing-12);
+}
+
+.data__input {
+    width: 120px;
+    vertical-align: top;
+}
+
+/* =============== Fin INIT/CREATE ============== */
