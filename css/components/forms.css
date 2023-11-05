@@ -144,18 +144,18 @@ input:focus::placeholder {
 
 /* =============== Inicio SHOP FORMS ============== */
 
-.shopform {
+.shop__form {
     font-family: var(--font-inter);
 }
 
-.formsearch--item input,
-.formsearch--item select {
+.forms__earch--item input,
+.form__search--item select {
     font-size: var(--font-18-medium);
     display: flex;
     align-items: center;
 }
 
-.checkboxcontent {
+.checkbox__content {
     padding: var(--spacing-20);
 }
 
@@ -164,7 +164,7 @@ input:focus::placeholder {
     align-items: center;
 }
 
-.checkboxlabel {
+.checkbox__label {
     font-size: var(--font-18-medium);
     padding-left: var(--spacing-8);
 }
@@ -179,17 +179,17 @@ input:focus::placeholder {
     border: 2px solid var(--fondo-oscuro);
 }
 
-.searchicon {
+.search__icon {
     color: #30343f;
     width: 40px;
     height: 40px;
 }
 
-.shopform {
+.shop__form {
     border-bottom: 1px dotted var(--negro-30);
 }
 
-.formsearch {
+.form__search {
     padding: 68px 0;
     width: clamp(250px, 250px, 100%);
     margin: auto;
@@ -199,7 +199,7 @@ input:focus::placeholder {
     gap: var(--spacing-16);
 }
 
-.labelshop {
+.label__shop {
     font-size: var(--font-24-large);
     font-weight: 600;
 }
