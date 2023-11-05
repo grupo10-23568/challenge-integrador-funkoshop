@@ -1,0 +1,21 @@
+.login {
+    min-height: 100vh;
+}
+
+.login__box {
+    width: clamp(250px, 100%, 515px);
+    margin: var(--spacing-128) auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: var(--spacing-24);
+}
+
+.login__title {
+    font-family: var(--font-raleway);
+    font-weight: 700;
+    text-align: center;
+    font-size: var(--font-38-jumbo);
+    letter-spacing: 1px;
+}
