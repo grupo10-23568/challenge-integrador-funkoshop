@@ -25,9 +25,45 @@ Para lograr este objetivo, deberás utilizar las siguientes
 - MySQL y Gestores de BBDD
 - Sequelize
 
-## 👁️✍️Nota para el equipo
+## 🧑‍💻Metodología de trabajo en equipo en Front-End
+### 1º etapa:
+Reuniones para coordinación de estructura y parámetros comúnes del sitio basados en cada Misssion.
 
-Para que todos los enlaces se mantengan equivalentes:
+### 2º etapa:
+Coordinación por sorteo de las secciones a realizar y aporte conjunto a modificaciones y sugerencias sobre todas las tareas en general.
+
+### 3º etapa:
+Desarrollo de las partes en código y subida al repositorio para testeo del grupo y finalmente, integración a la rama raiz.
+
+## ✍️Grupo de trabajo
+
+- Brenda Selene Argañaraz
+- Paula Caviglia
+- Andrea Vanina Luque
+- Vicence Saa
+- Federico Ariel Rosciano Engel
+- Silvia Veronelli
+- Brenda Villegas
+- Ariel Orlando Silva Mayta
+
+## 👁️Estructura del sitio (Front-End)
+
+- [Incio](https://grupo10-23568.github.io/challenge-integrador-funkoshop/index.html) |
+- pages/
+  - shop/
+    - [Shop](https://grupo10-23568.github.io/challenge-integrador-funkoshop/pages/shop/shop.html) |
+    - [Items](https://grupo10-23568.github.io/challenge-integrador-funkoshop/pages/shop/item.html) |
+    - [Cart](https://grupo10-23568.github.io/challenge-integrador-funkoshop/pages/shop/cart.html) |
+    - [Contact](https://grupo10-23568.github.io/challenge-integrador-funkoshop/pages/shop/contact.html) |
+- pages/
+  - admin/
+    - [Admin](https://grupo10-23568.github.io/challenge-integrador-funkoshop/pages/admin/admin.html) |
+    - [Login](https://grupo10-23568.github.io/challenge-integrador-funkoshop/pages/admin/login.html) |
+    - [Register](https://grupo10-23568.github.io/challenge-integrador-funkoshop/pages/admin/register.html) |
+    - [Create](https://grupo10-23568.github.io/challenge-integrador-funkoshop/pages/admin/create.html) |
+    - [Edit](https://grupo10-23568.github.io/challenge-integrador-funkoshop/pages/admin/edit.html) | <br>
+
+Parámetros establecidos:
 
 - La carpeta de imágenes es `img`
 - La carpeta de estilos es `css` y contiene las subcarpetas `components` y `pages`
