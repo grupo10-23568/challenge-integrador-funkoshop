@@ -48,20 +48,20 @@ Desarrollo de las partes en código y subida al repositorio para testeo del grup
 
 ## 👁️Estructura del sitio (Front-End)
 
-- [Incio](https://grupo10-23568.github.io/challenge-integrador-funkoshop/index.html) |
+- [Incio] 
 - pages/
   - shop/
-    - [Shop](https://grupo10-23568.github.io/challenge-integrador-funkoshop/pages/shop/shop.html) |
-    - [Items](https://grupo10-23568.github.io/challenge-integrador-funkoshop/pages/shop/item.html) |
-    - [Cart](https://grupo10-23568.github.io/challenge-integrador-funkoshop/pages/shop/cart.html) |
-    - [Contact](https://grupo10-23568.github.io/challenge-integrador-funkoshop/pages/shop/contact.html) |
+    - [Shop] 
+    - [Items] 
+    - [Cart] 
+    - [Contact] 
 - pages/
   - admin/
-    - [Admin](https://grupo10-23568.github.io/challenge-integrador-funkoshop/pages/admin/admin.html) |
-    - [Login](https://grupo10-23568.github.io/challenge-integrador-funkoshop/pages/admin/login.html) |
-    - [Register](https://grupo10-23568.github.io/challenge-integrador-funkoshop/pages/admin/register.html) |
-    - [Create](https://grupo10-23568.github.io/challenge-integrador-funkoshop/pages/admin/create.html) |
-    - [Edit](https://grupo10-23568.github.io/challenge-integrador-funkoshop/pages/admin/edit.html) | <br>
+    - [Admin] 
+    - [Login] 
+    - [Register] 
+    - [Create] 
+    - [Edit] <br>
 
 Parámetros establecidos:
 
