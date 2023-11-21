@@ -48,20 +48,20 @@ Desarrollo de las partes en código y subida al repositorio para testeo del grup
 
 ## 👁️Estructura del sitio (Front-End)
 
-- [Incio] 
+- [Incio](https://challenge-integrador-g10-23568.onrender.com/)
 - pages/
   - shop/
-    - [Shop] 
-    - [Items] 
-    - [Cart] 
-    - [Contact] 
+    - [Shop](https://challenge-integrador-g10-23568.onrender.com/pages/shop/shop.html)
+    - [Items](https://challenge-integrador-g10-23568.onrender.com/pages/shop/item.html)
+    - [Cart](https://challenge-integrador-g10-23568.onrender.com/pages/shop/cart.html)
+    - [Contact](https://challenge-integrador-g10-23568.onrender.com/pages/shop/contact.html)
 - pages/
   - admin/
-    - [Admin] 
-    - [Login] 
-    - [Register] 
-    - [Create] 
-    - [Edit] <br>
+    - [Admin](https://challenge-integrador-g10-23568.onrender.com/pages/admin/admin.html)
+    - [Login](https://challenge-integrador-g10-23568.onrender.com/pages/admin/login.html)
+    - [Register](https://challenge-integrador-g10-23568.onrender.com/pages/admin/register.html)
+    - [Create](https://challenge-integrador-g10-23568.onrender.com/pages/admin/create.html)
+    - [Edit](https://challenge-integrador-g10-23568.onrender.com/pages/admin/edit.html) <br>
 
 Parámetros establecidos:
 
