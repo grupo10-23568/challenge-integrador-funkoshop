@@ -1,0 +1,71 @@
+<%- include('../partials/header') %>
+
+    <main class="container admin">
+        <form action="" class="form__admin">
+            <iconify-icon icon="ion:search-sharp" class="search__icon"></iconify-icon>
+            <input class="search__input" type="text" name="search-admin" id="search-admin"
+                placeholder="código, nombre o categoría">
+        </form>
+        <section class="listado__head">
+            <h1 class="listado__title">LISTADO DE PRODUCTOS</h1>
+            <div class="listado__add">
+                <h2>AGREGAR</h2>
+                <a href="/admin/create"><iconify-icon class="listado__add--icon"
+                        icon="icon-park-solid:add"></iconify-icon></a>
+            </div>
+        </section>
+        <section class="listado_products">
+            <div class="row">
+                <div class="col">
+
+                    <table class="container table table-borderless listado__table">
+                        <thead>
+                            <tr>
+                                <th scope="col-1">ID</th>
+                                <th scope="col-3">Código</th>
+                                <th scope="col-3">Nombre del Producto</th>
+                                <th scope="col-3">Categoría</th>
+                                <th scope="col-1"></th>
+                                <th scope="col-1"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% items.forEach(item=> { %>
+                                <tr>
+                                    <th class="id" scope="row">
+                                        <%= item.product_id %>
+                                    </th>
+                                    <td>
+                                        <%= item.sku %>
+                                    </td>
+                                    <td>
+                                        <%= item.product_name %>
+                                    </td>
+                                    <td>
+                                        <%= item.category_name %>
+                                    </td>
+                                    <td><a href="/admin/edit/<%= item.product_id %>">
+                                            <iconify-icon class="td__icon--edit"
+                                                icon="material-symbols:edit"></iconify-icon>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <form action="/admin/delete/<%= item.product_id %>?_method=DELETE"
+                                            method="POST">
+                                            <button class="btn__borrar--item" type="submit">
+                                                <iconify-icon class="td__icon--delete"
+                                                    icon="material-symbols:delete"></iconify-icon>
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <% }); %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <%- include('../partials/footer') %>
