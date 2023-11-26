@@ -1,0 +1,85 @@
+<%- include('../partials/header') %>
+    <main class="container admin__main">
+        <h2 class="createdit__title">CREAR NUEVO ITEM</h2>
+
+        <form class="createdit__form" action="/admin/create" method="POST" enctype="multipart/form-data">
+            <article class="form__cat-lic">
+                <div class="form__item">
+                    <label class="form__label" for="category">Categoría:</label>
+                    <select class="form-select-lg form__select" name="category" id="category" required>
+                        <option value="" disabled selected hidden>Seleccionar</option>
+                        <% categories.forEach((category, i)=> { %>
+                            <option value="<%= i+1%>">
+                                <%= category.category_name%>
+                            </option>
+                            <% }); %>
+                    </select>
+                </div>
+                <div class="form__item">
+                    <label class="form__label" for="collection">Licencia:</label>
+                    <select class="form-select-lg form__select" name="collection" id="collection" required>
+                        <option value="" disabled selected hidden>Seleccionar</option>
+                        <% licences.forEach((licence, i)=> { %>
+                            <option value="<%= i+1%>">
+                                <%= licence.licence_name%>
+                            </option>
+                            <% }); %>
+                    </select>
+                </div>
+            </article>
+            <!-- Nombre y descripción del producto -->
+            <article class="createdit__name">
+                <label class="form__label" for="name">Nombre del producto:</label>
+                <input class="form__input createdit__input" type="text" name="name" id="name"
+                    placeholder="Kakashi Hatake Shippuden Saga" required>
+                <div>
+                    <textarea class="form__textarea--createdit" name="description" id="description" rows="13"
+                        placeholder="Descripción del producto" required></textarea>
+                </div>
+            </article>
+            <!-- Datos del producto línea 1 -->
+            <article class="createdit__block d-flex mb-5">
+                <div class="d-flex">
+                    <label class="form__label" for="sku">SKU:</label>
+                    <input class="form__input w-75" type="text" name="sku" id="sku" placeholder="SSK111AB001" required>
+                </div>
+                <div class="d-flex">
+                    <label class="form__label" for="price">Precio:</label>
+                    <input class="form__input w-75" type="text" name="price" id="price" data-type="currency"
+                        placeholder="0.000,00">
+                </div>
+                <div class="d-flex">
+                    <label class="form__label" for="stock">Stock:</label>
+                    <input class="form__input discount" type="text" name="stock" id="stock" placeholder="0" required>
+                </div>
+            </article>
+            <!-- Datos del producto línea 2 -->
+            <article class="createdit__block d-flex mb-5">
+                <label class="form__label" for="discount">Descuento:</label>
+                <input class="form__input discount" type="text" name="discount" id="discount" placeholder="0" required>
+
+                <label class="form__label" for="dues">Cuotas:</label>
+                <select class="form-select-lg form__select form__input" name="dues" id="dues">
+                    <option value="0">Sin cuotas</option>
+                    <option value="3">3 cuotas s/ interés</option>
+                    <option value="6">6 cuotas s/ interés</option>
+                    <option value="9">9 cuotas s/ interés</option>
+                    <option value="12">12 cuotas s/ interés</option>
+                    <option value="18">18 cuotas s/ interés</option>
+                    <option value="24">24 cuotas s/ interés</option>
+                </select>
+            </article>
+
+            <!-- Carga de imágenes -->
+            <div class="form__flex block__data">
+                <label class="form__label" for="images">Imagenes:</label>
+                <input type="file" name="images" id="img" multiple>
+            </div>
+            <!-- Botones Agregar / Limpiar -->
+            <div class="form__flex gap-4">
+                <input class="btn form__btn btn-create" type="submit" value="Agregar Producto">
+                <input class="btn form__btn btn-create" type="reset" value="Limpiar">
+            </div>
+        </form>
+    </main>
+    <%- include('../partials/footer') %>
