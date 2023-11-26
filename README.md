@@ -25,7 +25,7 @@ Para lograr este objetivo, deberás utilizar las siguientes
 - MySQL y Gestores de BBDD
 - Sequelize
 
-## 🧑‍💻Metodología de trabajo en equipo en Front-End
+## 🧑‍💻Metodología de trabajo en equipo
 ### 1º etapa:
 Reuniones para coordinación de estructura y parámetros comúnes del sitio basados en cada Mission.
 
