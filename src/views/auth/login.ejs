@@ -1,0 +1,28 @@
+<%- include('../partials/header') %>
+
+    <main id="login" class="login__box container">
+        <h2 class="login__title">INGRESAR A MI CUENTA</h2>
+
+        <form class="login__form" action="/auth/login" method="post">
+            <div class="form__item">
+                <label for="email" class="form__label">Email:</label>
+                <input class="form__input" type="email" name="email" id="email" placeholder="johndoe@correo.com">
+            </div>
+            <div class="form__item">
+                <label for="password" class="form__label">Contraseña:</label>
+                <input class="form__input" type="password" name="password" id="password"
+                    placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
+            </div>
+            <div class="form__submit">
+                <input class="form__btn" type="submit" value="Ingresar">
+                <div class="form__remember">
+                    <input class="form-check-login" type="checkbox" name="remember" id="remember">
+                    <label class="checkbox__label--login" for="remember">Recordarme</label>
+                </div>
+            </div>
+            <a href="#" class="form__lost">Olvidé mi contraseña</a>
+        </form>
+    </main>
+
+
+    <%- include('../partials/footer') %>

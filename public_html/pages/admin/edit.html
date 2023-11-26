@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <title>Funkoshop Create</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar container">
+            <picture class="navbar__logo">
+                <a href="../../index.html">
+                    <img src="../../img/branding/logo_light_horizontal.svg" alt="Logo Funkoshop">
+                </a>
+            </picture>
+            <ul class="navbar__menu">
+                <li class="navbar__item with-submenu"><a class="navbar__link with-icon"
+                        href="../shop/shop.html">SHOP<iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
+                    <ul class="submenu">
+                        <li class="submenu__item"><a href="" class="submenu__link">Funkos</a></li>
+                        <li class="submenu__item"><a href="" class="submenu__link">Remeras</a></li>
+                        <li class="submenu__item"><a href="" class="submenu__link">Llaveros</a></li>
+                    </ul>
+                </li>
+                <li class="navbar__item"><a class="navbar__link" href="../shop/contact.html">CONTACTO</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="../admin/login.html">LOGIN</a></li>
+                <li class="navbar__item"><a class="navbar__cart" href="../shop/cart.html"><img
+                            src="../../img/icons/cart-icon.svg" alt=""></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container admin__main">
+        <h2 class="createdit__title">EDITAR ITEM</h2>
+
+        <form class="createdit__form" action="/admin/create" method="POST" enctype="multipart/form-data">
+            <article class="form__cat-lic">
+                <div class="form__item">
+                    <label class="form__label" for="category">Categoría:</label>
+                    <select class="form-select-lg form__select" name="category" id="category" required>
+                        <option value="" disabled selected hidden>Seleccionar</option>
+                    </select>
+                </div>
+                <div class="form__item">
+                    <label class="form__label" for="collection">Licencia:</label>
+                    <select class="form-select-lg form__select" name="collection" id="collection" required>
+                        <option value="" disabled selected hidden>Seleccionar</option>
+
+                    </select>
+                </div>
+            </article>
+            <!-- Nombre y descripción del producto -->
+            <article class="createdit__name">
+                <label class="form__label" for="name">Nombre del producto:</label>
+                <input class="form__input createdit__input" type="text" name="name" id="name"
+                    placeholder="Kakashi Hatake Shippuden Saga" required>
+                <div>
+                    <textarea class="form__textarea--createdit" name="description" id="description" rows="13"
+                        placeholder="Descripción del producto" required></textarea>
+                </div>
+            </article>
+            <!-- Datos del producto línea 1 -->
+            <article class="createdit__block d-flex mb-5">
+                <div class="d-flex">
+                    <label class="form__label" for="sku">SKU:</label>
+                    <input class="form__input w-75" type="text" name="sku" id="sku" placeholder="SSK111AB001" required>
+                </div>
+                <div class="d-flex">
+                    <label class="form__label" for="price">Precio:</label>
+                    <input class="form__input w-75" type="text" name="price" id="price" data-type="currency"
+                        placeholder="0.000,00">
+                </div>
+                <div class="d-flex">
+                    <label class="form__label" for="stock">Stock:</label>
+                    <input class="form__input discount" type="text" name="stock" id="stock" placeholder="0" required>
+                </div>
+            </article>
+            <!-- Datos del producto línea 2 -->
+            <article class="createdit__block d-flex mb-5">
+                <label class="form__label" for="discount">Descuento:</label>
+                <input class="form__input discount" type="text" name="discount" id="discount" placeholder="0" required>
+
+                <label class="form__label" for="dues">Cuotas:</label>
+                <select class="form-select-lg form__select form__input" name="dues" id="dues">
+                    <option value="0">Sin cuotas</option>
+                    <option value="3">3 cuotas s/ interés</option>
+                    <option value="6">6 cuotas s/ interés</option>
+                    <option value="9">9 cuotas s/ interés</option>
+                    <option value="12">12 cuotas s/ interés</option>
+                    <option value="18">18 cuotas s/ interés</option>
+                    <option value="24">24 cuotas s/ interés</option>
+                </select>
+            </article>
+
+            <!-- Carga de imágenes -->
+            <div class="form__flex block__data">
+                <label class="form__label" for="images">Imagenes:</label>
+                <input class="form__files" type="file" name="images" id="img" multiple>
+            </div>
+            <div class="form__flex gap-5">
+                <div class="edit__img">
+                    <img src="" alt="">
+                    <p class="edit__img-side">Frente</p>
+                </div>
+                <div class="edit__img">
+                    <img src="" alt="">
+                    <p class="edit__img-side">Dorso</p>
+                </div>
+            </div>
+
+            <!-- Botones Agregar / Limpiar -->
+            <div class="form__flex gap-4">
+                <input class="btn form__btn btn-create" type="submit" value="Modificar Producto">
+            </div>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <nav class="navbar container">
+            <ul class="navbar__item">
+                <li class="navbar__item"><a class="navbar__link" href="../shop/shop.html">SHOP</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="../admin/login.html">INGRESAR</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="../shop/contact.html">CONTACTO</a></li>
+            </ul>
+            <picture>
+                <a href="../../index.html">
+                    <img src="../../img/branding/isotype.svg" alt="">
+                </a>
+            </picture>
+        </nav>
+        <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy</p>
+    </footer>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</body>
+
+</html>

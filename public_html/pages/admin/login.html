@@ -26,7 +26,7 @@
                         <li class="submenu__item"><a href="" class="submenu__link">Llaveros</a></li>
                     </ul>
                 </li>
-                <li class="navbar__item"><a class="navbar__link" href="mailto:contacto@funkoshop.com">CONTACTO</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="../shop/contact.html">CONTACTO</a></li>
                 <li class="navbar__item"><a class="navbar__link" href="../admin/login.html">LOGIN</a></li>
                 <li class="navbar__item"><a class="navbar__cart" href="../shop/cart.html"><img
                             src="../../img/icons/cart-icon.svg" alt=""></a></li>
@@ -34,19 +34,11 @@
         </nav>
     </header>
 
-    <main id="login" class="register__box container">
-        <h2 class="login__title">CREA TU CUENTA</h2>
-        <p class="description__register">Completa el formulario para ser parte del mundo de los Funkos</p>
+    <main id="login" class="login__box container">
+        <h2 class="login__title">INGRESAR A MI CUENTA</h2>
 
-        <form class="register__form" action="https://challenge-funkoshop-23568-fullstack.vercel.app/auth/register" method="post">
-            <div class="form__item">
-                <label for="name" class="form__label">Nombre:</label>
-                <input class="form__input" type="text" name="name" id="name" placeholder="John">
-            </div>
-            <div class="form__item">
-                <label for="last-name" class="form__label">Apellido:</label>
-                <input class="form__input" type="text" name="last-name" id="last-name" placeholder="Doe">
-            </div>
+        <form class="login__form" action="https://challenge-funkoshop-23568-fullstack.vercel.app/auth/login"
+            method="post">
             <div class="form__item">
                 <label for="email" class="form__label">Email:</label>
                 <input class="form__input" type="email" name="email" id="email" placeholder="johndoe@correo.com">
@@ -55,18 +47,15 @@
                 <label for="password" class="form__label">Contraseña:</label>
                 <input class="form__input" type="password" name="password" id="password" placeholder="●●●●●●●●●">
             </div>
-            <div class="form__item">
-                <label for="repeat-password" class="form__label">Repita Contraseña:</label>
-                <input class="form__input" type="password" name="repeat-password" id="repeat-password" placeholder="●●●●●●●●●">
-            </div>
             <div class="form__submit">
                 <input class="form__btn" type="submit" value="Ingresar">
                 <div class="form__remember">
                     <input class="form-check-login" type="checkbox" name="remember" id="remember">
-                    <label class="checkbox__label--login" for="accept">Acepto <a href="https://challenge-funkoshop-23568-fullstack.vercel.app/auth/register"><span class="terms">Téminos y
-                                Condiciones</span></a></label>
+                    <label class="checkbox__label--login" for="remember">Recordarme</label>
                 </div>
             </div>
+            <a href="https://challenge-funkoshop-23568-fullstack.vercel.app/auth/login#" class="form__lost">Olvidé mi
+                contraseña</a>
         </form>
     </main>
 
@@ -75,7 +64,7 @@
             <ul class="navbar__item">
                 <li class="navbar__item"><a class="navbar__link" href="../shop/shop.html">SHOP</a></li>
                 <li class="navbar__item"><a class="navbar__link" href="../admin/login.html">INGRESAR</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="mailto:contacto@funkoshop.com">CONTACTO</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="../shop/contact.html">CONTACTO</a></li>
             </ul>
             <picture>
                 <a href="../../index.html">

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>
+        <%= view.title %>
+    </title>
+</head>
+
+<body>
+    <header>
+        <% if (locals.isLogged) { %>
+            <nav class="navbar container">
+                <picture class="navbar__logo">
+                    <a href="/home">
+                        <img class="logo__branding" src="/img/branding/logo_light_horizontal.svg" alt="Logo Funkoshop">
+                    </a>
+                </picture>
+                <ul class="navbar__menu">
+                    <li class="navbar__item"><a class="navbar__link" href="/shop">VER TIENDA</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="/admin">ADMIN</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="/auth/logout">SALIR</a></li>
+                    <li class="navbar__item"><a class="navbar__cart" href="/shop/cart"><img
+                                src="img/icons/cart-icon.svg" alt=""></a></li>
+                </ul>
+            </nav>
+            <% } else { %>
+                <nav class="navbar container">
+                    <picture class="navbar__logo">
+                        <a href="/home">
+                            <img class="logo__branding" src="/img/branding/logo_light_horizontal.svg"
+                                alt="Logo Funkoshop">
+                        </a>
+                    </picture>
+                    <ul class="navbar__menu">
+                        <li class="navbar__item with-submenu"><a class="navbar__link with-icon"
+                                href="">SHOP<iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
+                            <ul class="submenu">
+                                <li class="submenu__item"><a href="/shop" class="submenu__link">Funkos</a></li>
+                                <li class="submenu__item"><a href="" class="submenu__link">Remeras</a></li>
+                                <li class="submenu__item"><a href="" class="submenu__link">Llaveros</a></li>
+                            </ul>
+                        </li>
+                        <li class="navbar__item"><a class="navbar__link" href="/contact">CONTACTO</a></li>
+                        <li class="navbar__item"><a class="navbar__link" href="/auth/login">LOGIN</a></li>
+                        <li class="navbar__item"><a class="navbar__cart" href="/shop/cart"><img
+                                    src="img/icons/cart-icon.svg" alt=""></a></li>
+                    </ul>
+                </nav>
+                <% } %>
+
+    </header>
+</body>
