@@ -27,13 +27,15 @@ Para lograr este objetivo, deberás utilizar las siguientes
 
 ## 🧑‍💻Metodología de trabajo en equipo en Front-End
 ### 1º etapa:
-Reuniones para coordinación de estructura y parámetros comúnes del sitio basados en cada Misssion.
+Reuniones para coordinación de estructura y parámetros comúnes del sitio basados en cada Mission.
 
 ### 2º etapa:
 Coordinación por sorteo de las secciones a realizar y aporte conjunto a modificaciones y sugerencias sobre todas las tareas en general.
 
 ### 3º etapa:
 Desarrollo de las partes en código y subida al repositorio para testeo del grupo y finalmente, integración a la rama raiz.
+
+Nuestro equipo siguió un proceso de desarrollo estructurado. En reuniones semanales, discutimos misiones del coordinador y avanzamos con lo aprendido en clase e investigando la documentación en conjunto e individualmente. Debatimos y acordamos código y parámetros comunes para mantener consistencia en nombres, clases, etiquetas, ids y estructura del código, ajustándolo a las especificaciones sugerida y solicitadas en las Missions. Cada miembro escribió y verificó el proyecto localmente, realizando pull requests y merges al repositorio principal una vez que estuvo funcionando correctamente. Este enfoque creemos que nos llevó a un desarrollo coherente y funcional del proyecto.
 
 ## ✍️Grupo de trabajo
 
@@ -45,30 +47,6 @@ Desarrollo de las partes en código y subida al repositorio para testeo del grup
 - Silvia Veronelli
 - Brenda Villegas
 - Ariel Orlando Silva Mayta
-
-## 👁️Estructura del sitio (Front-End)
-
-- [Incio](https://challenge-integrador-g10-23568.onrender.com/)
-- pages/
-  - shop/
-    - [Shop](https://challenge-integrador-g10-23568.onrender.com/pages/shop/shop.html)
-    - [Items](https://challenge-integrador-g10-23568.onrender.com/pages/shop/item.html)
-    - [Cart](https://challenge-integrador-g10-23568.onrender.com/pages/shop/cart.html)
-    - [Contact](https://challenge-integrador-g10-23568.onrender.com/pages/shop/contact.html)
-- pages/
-  - admin/
-    - [Admin](https://challenge-integrador-g10-23568.onrender.com/pages/admin/admin.html)
-    - [Login](https://challenge-integrador-g10-23568.onrender.com/pages/admin/login.html)
-    - [Register](https://challenge-integrador-g10-23568.onrender.com/pages/admin/register.html)
-    - [Create](https://challenge-integrador-g10-23568.onrender.com/pages/admin/create.html)
-    - [Edit](https://challenge-integrador-g10-23568.onrender.com/pages/admin/edit.html) <br>
-
-Parámetros establecidos:
-
-- La carpeta de imágenes es `img`
-- La carpeta de estilos es `css` y contiene las subcarpetas `components` y `pages`
-- La carpeta de scripts es `js`
-- La carpeta contenedora de archivos html es `pages` y contiene las subcarpetas `admin` y `shop`
 
 ## 👁️Estructura del sitio Full Stack:
 ```plaintext
