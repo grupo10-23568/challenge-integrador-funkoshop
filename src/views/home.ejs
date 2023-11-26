@@ -1,0 +1,57 @@
+<%- include('partials/header') %>
+
+    <section class="hero">
+        <article class="hero__content container">
+            <h3 class="hero__title">Nuevos Ingresos</h3>
+            <p class="hero__text">Descubrí el próximo Funko Pop de tu colección</p>
+            <a class="hero__link" href="/shop">SHOP</a>
+        </article>
+    </section>
+
+    <main class="container">
+        <% collections.forEach( collection=> { %>
+            <section class="row collection">
+                <article class="col-md-6 collection__content">
+                    <h3 class="collection__title">
+                        <%= collection.licence_name %>
+                    </h3>
+                    <p class="collection__text">
+                        <%= collection.licence_description %>
+                    </p>
+                    <hr class="collection__hr" width="100%">
+                    <a class=" collection__link" href="/shop?filter=licence-<%= collection.licence_id %>">ver
+                        colección</a>
+                </article>
+                <picture class="col-md-6 collection__cover">
+                    <img src="/img/<%= collection.licence_image %>" alt="">
+                </picture>
+            </section>
+            <% }); %>
+                <!-- <section class="row collection">
+            <article class="col-md-6 collection__content">
+                <h3 class="collection__title">POKEMON INDIGO</h3>
+                <p class="collection__text">Atrapa todos los que puedas y disfruta<br>de una colección llena de amigos.
+                </p>
+                <hr class="collection__hr" width="100%">
+                <a class="collection__link" href="/shop">ver colección</a>
+            </article>
+            <picture class="col-md-6 collection__cover">
+                <img src="img/pokemon/vulpix-1.webp" alt="">
+            </picture>
+        </section>
+        <section class="row collection">
+            <article class="col-md-6 collection__content">
+                <h3 class="collection__title">HARRY POTTER</h3>
+                <p class="collection__text">Revive los recuerdos de una saga llena<br>de magia y encanto</p>
+                <hr class="collection__hr" width="100%">
+                <a class="collection__link" href="/shop">ver colección</a>
+            </article>
+            <picture class="col-md-6 collection__cover">
+                <img src="img/harry-potter/snape-patronus-1.webp" alt="">
+            </picture>
+        </section> -->
+
+                <%- include('partials/sliders') %>
+    </main>
+
+    <%- include('partials/footer') %>
