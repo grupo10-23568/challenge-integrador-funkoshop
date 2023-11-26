@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <title>Funkoshop Home</title>
+</head>
+
+<body class="login">
+    <header>
+        <nav class="navbar container">
+            <picture class="navbar__logo">
+                <a href="../../index.html">
+                    <img src="../../img/branding/logo_light_horizontal.svg" alt="Logo Funkoshop">
+                </a>
+            </picture>
+            <ul class="navbar__menu">
+                <li class="navbar__item with-submenu"><a class="navbar__link with-icon"
+                        href="../shop/shop.html">SHOP<iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
+                    <ul class="submenu">
+                        <li class="submenu__item"><a href="" class="submenu__link">Funkos</a></li>
+                        <li class="submenu__item"><a href="" class="submenu__link">Remeras</a></li>
+                        <li class="submenu__item"><a href="" class="submenu__link">Llaveros</a></li>
+                    </ul>
+                </li>
+                <li class="navbar__item"><a class="navbar__link" href="../shop/contact.html">CONTACTO</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="../admin/login.html">LOGIN</a></li>
+                <li class="navbar__item"><a class="navbar__cart" href="../shop/cart.html"><img
+                            src="../../img/icons/cart-icon.svg" alt=""></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="login" class="login__box container">
+        <h2 class="login__title">INGRESAR A MI CUENTA</h2>
+
+        <form class="login__form" action="https://challenge-funkoshop-23568-fullstack.vercel.app/auth/login"
+            method="post">
+            <div class="form__item">
+                <label for="email" class="form__label">Email:</label>
+                <input class="form__input" type="email" name="email" id="email" placeholder="johndoe@correo.com">
+            </div>
+            <div class="form__item">
+                <label for="password" class="form__label">Contraseña:</label>
+                <input class="form__input" type="password" name="password" id="password" placeholder="●●●●●●●●●">
+            </div>
+            <div class="form__submit">
+                <input class="form__btn" type="submit" value="Ingresar">
+                <div class="form__remember">
+                    <input class="form-check-login" type="checkbox" name="remember" id="remember">
+                    <label class="checkbox__label--login" for="remember">Recordarme</label>
+                </div>
+            </div>
+            <a href="https://challenge-funkoshop-23568-fullstack.vercel.app/auth/login#" class="form__lost">Olvidé mi
+                contraseña</a>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <nav class="navbar container">
+            <ul class="navbar__item">
+                <li class="navbar__item"><a class="navbar__link" href="../shop/shop.html">SHOP</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="../admin/login.html">INGRESAR</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="../shop/contact.html">CONTACTO</a></li>
+            </ul>
+            <picture>
+                <a href="../../index.html">
+                    <img src="../../img/branding/isotype.svg" alt="">
+                </a>
+            </picture>
+        </nav>
+        <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy</p>
+    </footer>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</body>
+
+</html>

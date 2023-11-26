@@ -1,0 +1,45 @@
+.contact__title {
+    margin: var(--spacing-36) 0;
+    font-family: var(--font-raleway);
+    font-weight: 700;
+    font-size: var(--font-38-jumbo);
+    text-transform: uppercase;
+}
+
+.contact__subtitle{
+    font-family: var(--font-inter);
+    font-size: var(--font-24-large);
+    font-weight: 500;
+}
+
+.contact__form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact__item{
+    margin-bottom: var(--spacing-24);
+}
+
+.contact__button{
+    background-color: var(--rojo);
+    color:var(--blanco);
+    font-family: var(--font-inter);
+    font-size: var(--font-24-large);
+    border: none;
+    margin-bottom: var(--spacing-36);
+    padding:var(--spacing-8);
+}
+
+.contact__button:hover {
+    background-color: var(--rojo-70);
+}
+
+a:link {
+    text-decoration: none;    
+   }
+
+   a.submenu__link{
+    color: var(--color-claro);
+   }

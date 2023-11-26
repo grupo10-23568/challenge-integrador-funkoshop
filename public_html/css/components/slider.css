@@ -1,0 +1,126 @@
+/* Sliders Ultimos Lanzamientos & Productos Relacionados */
+.slider {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-36);
+    margin: var(--spacing-8) auto;
+    font-family: var(--font-inter);
+}
+
+.slider__title {
+    font-family: var(--font-raleway);
+    font-size: var(--font-46-display);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.card-item__content {
+    display: flex;
+    font-family: var(--font-inter);
+    flex-direction: column;
+    /* gap: var(--spacing-8); */
+    padding: var(--spacing-16) 0;
+}
+
+.card-item__licence {
+    font-size: var(--font-14-xsmall);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.card-item__name {
+    font-size: var(--font-18-medium);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.card-item__price {
+    font-size: var(--font-16-small);
+    font-weight: 500;
+}
+
+.card-item__promo {
+    font-size: var(--font-12-xxsmall);
+    color: var(--azul);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.card-item__cover {
+    display: flex;
+    position: relative;
+}
+
+.card-item__cover img {
+    animation: fade 1.2s;
+}
+
+.card-item__img--back {
+    display: none;
+}
+
+.card-item {
+    margin: var(--spacing-20) 0;
+}
+
+.card-item:hover .card-item__img--back {
+    display: block;
+}
+
+.card-item:hover .card-item__img--front {
+    display: none;
+}
+
+.card-item__tag {
+    color: var(--blanco);
+    background-color: var(--rojo);
+    font-size: var(--font-14-xsmall);
+    padding: 5px var(--spacing-24);
+    position: absolute;
+    right: 0;
+}
+
+iconify-icon {
+    color: var(--fondo-claro);
+    font-size: var(--font-16-small);
+    font-weight: 700;
+}
+
+iconify-icon.icon {
+    color: var(--fondo-oscuro);
+}
+
+iconify-icon.icon:hover {
+    color: var(--color-negro-30);
+}
+
+/* Animacion */
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.glide__arrow {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glide__arrow:hover {
+    background-color: var(--fondo-claro);
+}
+
+.glide__arrow--left {
+    left: 0;
+}
+
+.glide__arrow--right {
+    right: 0;
+}

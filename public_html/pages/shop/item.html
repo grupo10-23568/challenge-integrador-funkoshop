@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <title>Funkoshop</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar container">
+            <picture class="navbar__logo">
+                <a href="../../index.html">
+                    <img src="../../img/branding/logo_light_horizontal.svg" alt="Logo Funkoshop">
+                </a>
+            </picture>
+            <ul class="navbar__menu">
+                <li class="navbar__item with-submenu"><a class="navbar__link with-icon"
+                        href="../shop/shop.html">SHOP<iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
+                    <ul class="submenu">
+                        <li class="submenu__item"><a href="" class="submenu__link">Funkos</a></li>
+                        <li class="submenu__item"><a href="" class="submenu__link">Remeras</a></li>
+                        <li class="submenu__item"><a href="" class="submenu__link">Llaveros</a></li>
+                    </ul>
+                </li>
+                <li class="navbar__item"><a class="navbar__link" href="../shop/contact.html">CONTACTO</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="../admin/login.html">LOGIN</a></li>
+                <li class="navbar__item"><a class="navbar__cart" href="../shop/cart.html"><img
+                            src="../../img/icons/cart-icon.svg" alt=""></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-container">
+        <section class="items container">
+            <article class="row items__content card-item">
+                <picture class="col-md-6 item__img card-item__cover">
+                    <img class="card-item__img--front" src="../../img/star-wars/baby-yoda-1.webp" alt="Baby Yoda">
+                    <img class="card-item__img--back" src="../../img/star-wars/baby-yoda-box.webp" alt="Baby Yoda Box">
+                </picture>
+
+                <div class="col-md-6 items__details">
+                    <p class="items_licence">STAR WARS</p>
+                    <h3 class="items__name">BABY YODA BLUEBALL</h3>
+                    <p class="items__text">Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga,
+                        edición limitada.</p>
+                    <p class="items__price">$1799,99.-</p>
+                    <div class="items__cart">
+                        <input class="items__input" type="text" name="quantity" id="quantity" placeholder="0">
+                        <div class="items__cart--btn">
+                            <button id="add" class="items__cart--mas">+</button>
+                            <button id="substract" class="items__cart--menos">-</button>
+                        </div>
+                        <button type="submit" class="items__addcart">Agregar al carrito</button>
+                    </div>
+                    <p class="items__promo"><a href="#">Ver metodos de pago </a> - 3 CUOTAS SIN INTERÉS</p>
+                </div>
+            </article>
+        </section>
+        <section class="slider container glide">
+            <h2 class="slider__title">Productos relacionados</h2>
+            <div class="glide__track" data-glide-el="track">
+                <ul class="slider__items glide__slides">
+                    <li class="slider__item glide__slides">
+                        <article class="card-item">
+                            <a class="card-item__link" href="">
+                                <picture class="card-item__cover">
+                                    <img class="card-item__img--front" src="../../img/star-wars/trooper-1.webp"
+                                        alt="Tropper">
+                                    <img class="card-item__img--back" src="../../img/star-wars/trooper-box.webp"
+                                        alt="Trooper Box">
+                                    <span class="card-item__tag">NUEVO</span>
+                                </picture>
+                                <div class="card-item__content">
+                                    <p class="card-item__licence">STAR WARS</p>
+                                    <h4 class="card-item__name">Stormtrooper lightsaber</h4>
+                                    <p class="card-item__price">$1799,99.-</p>
+                                    <p class="card-item__promo">3 cuotas sin interés</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    <li class="slider__item glide__slides">
+                        <article class="card-item">
+                            <a class="card-item__link" href="">
+                                <picture class="card-item__cover">
+                                    <img class="card-item__img--front" src="../../img/pokemon/pidgeotto-1.webp"
+                                        alt="Pokemon">
+                                    <img class="card-item__img--back" src="../../img/pokemon/pidgeotto-box.webp"
+                                        alt="Pokemon Box">
+                                    <span class="card-item__tag">NUEVO</span>
+                                </picture>
+                                <div class="card-item__content">
+                                    <p class="card-item__licence">POKEMON</p>
+                                    <h4 class="card-item__name">PIDGEOTTO</h4>
+                                    <p class="card-item__price">$1799,99.-</p>
+                                    <p class="card-item__promo">3 cuotas sin interés</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    <li class="slider__item glide__slides">
+                        <article class="card-item">
+                            <a class="card-item__link" href="">
+                                <picture class="card-item__cover">
+                                    <img class="card-item__img--front" src="../../img/harry-potter/luna-1.webp"
+                                        alt="Luna">
+                                    <img class="card-item__img--back" src="../../img/harry-potter/luna-box.webp"
+                                        alt="Luna Box">
+                                    <span class="card-item__tag">NUEVO</span>
+                                </picture>
+                                <div class="card-item__content">
+                                    <p class="card-item__licence">HARRY POTTER</p>
+                                    <h4 class="card-item__name">Luna Lovegood lion mask</h4>
+                                    <p class="card-item__price">$1799,99.-</p>
+                                    <p class="card-item__promo">3 cuotas sin interés</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+            <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><iconify-icon class="icon"
+                        icon="ic:twotone-chevron-left"></iconify-icon></button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><iconify-icon class="icon"
+                        icon="ic:twotone-chevron-right"></iconify-icon></button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <nav class="navbar container">
+            <ul class="navbar__item">
+                <li class="navbar__item"><a class="navbar__link" href="../shop/shop.html">SHOP</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="../admin/login.html">INGRESAR</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="register.html">REGISTRARSE</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="../shop/contact.html">CONTACTO</a></li>
+            </ul>
+            <picture>
+                <a href="../../index.html">
+                    <img src="../../img/branding/isotype.svg" alt="">
+                </a>
+            </picture>
+        </nav>
+        <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="../../js/items.js"></script>
+
+    <script>
+        new Glide('.glide',
+            {
+                type: 'carousel',
+                startAt: 0,
+                perView: 3,
+                gap: 30,
+                breakpoints: {
+                    991: {
+                        perView: 2
+                    },
+                    768: {
+                        perView: 1
+                    }
+                }
+            }
+        ).mount();
+    </script>
+</body>
+
+</html>

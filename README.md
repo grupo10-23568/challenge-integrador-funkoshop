@@ -25,11 +25,99 @@ Para lograr este objetivo, deberás utilizar las siguientes
 - MySQL y Gestores de BBDD
 - Sequelize
 
-## 👁️✍️Nota para el equipo
+## 🧑‍💻Metodología de trabajo en equipo en Front-End
+### 1º etapa:
+Reuniones para coordinación de estructura y parámetros comúnes del sitio basados en cada Misssion.
 
-Para que todos los enlaces se mantengan equivalentes:
+### 2º etapa:
+Coordinación por sorteo de las secciones a realizar y aporte conjunto a modificaciones y sugerencias sobre todas las tareas en general.
 
-- La carpeta de imágenes llama `img`.
-- La carpeta de estilos se llama `css` y contiene las subcarpetas `components` y `pages`
-- La carpeta de scripts se llama `js`.
-- La carpeta contenedora de archivos html se llama `pages` y contiene las subcarpetas `admin` y `shop`.
+### 3º etapa:
+Desarrollo de las partes en código y subida al repositorio para testeo del grupo y finalmente, integración a la rama raiz.
+
+## ✍️Grupo de trabajo
+
+- Brenda Selene Argañaraz
+- Paula Caviglia
+- Andrea Vanina Luque
+- Vicence Saa
+- Federico Ariel Rosciano Engel
+- Silvia Veronelli
+- Brenda Villegas
+- Ariel Orlando Silva Mayta
+
+## 👁️Estructura del sitio (Front-End)
+
+- [Incio](https://challenge-integrador-g10-23568.onrender.com/)
+- pages/
+  - shop/
+    - [Shop](https://challenge-integrador-g10-23568.onrender.com/pages/shop/shop.html)
+    - [Items](https://challenge-integrador-g10-23568.onrender.com/pages/shop/item.html)
+    - [Cart](https://challenge-integrador-g10-23568.onrender.com/pages/shop/cart.html)
+    - [Contact](https://challenge-integrador-g10-23568.onrender.com/pages/shop/contact.html)
+- pages/
+  - admin/
+    - [Admin](https://challenge-integrador-g10-23568.onrender.com/pages/admin/admin.html)
+    - [Login](https://challenge-integrador-g10-23568.onrender.com/pages/admin/login.html)
+    - [Register](https://challenge-integrador-g10-23568.onrender.com/pages/admin/register.html)
+    - [Create](https://challenge-integrador-g10-23568.onrender.com/pages/admin/create.html)
+    - [Edit](https://challenge-integrador-g10-23568.onrender.com/pages/admin/edit.html) <br>
+
+Parámetros establecidos:
+
+- La carpeta de imágenes es `img`
+- La carpeta de estilos es `css` y contiene las subcarpetas `components` y `pages`
+- La carpeta de scripts es `js`
+- La carpeta contenedora de archivos html es `pages` y contiene las subcarpetas `admin` y `shop`
+
+## 👁️Estructura del sitio Full Stack:
+```plaintext
+
+/proyecto
+├── index.js
+├── /config
+│   └── conn.js (conexión a base de datos)
+├── /controllers
+│   ├── /adminControllers.js
+│   ├── /authControllers.js
+│   ├── /mainControllers.js
+│   └── /shopControllers.js
+├── /middlewares
+│   ├── /login.js
+│   ├── /uploadFiles.js
+│   └── /validator.js
+├── /models
+│   ├── /categoryModel.js
+│   ├── /itemModel.js
+│   └── /licenceModel.js
+├── /routes
+│   ├── /adminRoutes.js
+│   ├── /authRoutes.js
+│   ├── /mainRoutes.js
+│   └── /shopRoutes.js
+├── /services
+│   ├── /categoryServices.js
+│   ├── /itemServices.js
+│   └── /licenceServices.js
+├── /utils
+│   └── /session.js
+├── /views
+│   ├── /contact.ejs
+│   ├── /home.ejs
+│   ├── /admin
+│   │   ├── /admin.ejs
+│   │   ├── /create.ejs
+│   │   └── /edit.ejs
+│   ├── /auth
+│   │   ├── /login.ejs
+│   │   └── /register.ejs
+│   ├── /partials
+│   │   ├── /card.ejs
+│   │   ├── /footer.ejs
+│   │   ├── /header.ejs
+│   │   └── /sliders.ejs
+│   └── /shop
+│       ├── /cart.ejs
+│       ├── /item.ejs
+│       └── /shop.ejs 
+```

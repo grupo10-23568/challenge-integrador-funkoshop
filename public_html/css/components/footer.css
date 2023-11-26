@@ -1,0 +1,16 @@
+/* FOOTER */
+.footer {
+    background-color: var(--fondo-oscuro);
+    padding: var(--spacing-128) 0 var(--spacing-16);
+}
+
+.footer__copy {
+    text-align: center;
+    margin-top: var(--spacing-24);
+    font-size: var(--font-18-medium);
+}
+
+.navbar__link {
+    line-height: .6;
+    font-size: var(--font-18-medium);
+}

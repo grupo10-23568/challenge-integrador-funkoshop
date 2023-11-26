@@ -1,0 +1,22 @@
+.description__register {
+    font-size: var(--font-30-xlarge);
+    text-align: center;
+}
+
+.register__box {
+    width: clamp(250px, 100%, 900px);
+    margin: var(--spacing-128) auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: var(--spacing-24);
+}
+
+.terms {
+    font-size: var(--font-18-small);
+}
+
+a .terms {
+    color: var(--azul);
+}

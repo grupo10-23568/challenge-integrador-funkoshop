@@ -1,0 +1,305 @@
+/* =============== Inicio FORM ADMIN ============== */
+
+.form__admin {
+    margin-top: var(--spacing-28);
+    display: flex;
+    align-items: center;
+}
+
+.search__icon {
+    /* color: var(--fondo-oscuro); */
+    font-size: var(--font-30-xlarge);
+}
+
+.search__input {
+    width: 35%;
+    border: 2px solid var(--fondo-oscuro);
+    border-radius: 5px;
+    font-size: var(--font-16-small);
+    font-family: var(--font-inter);
+    padding: var(--spacing-8) var(--spacing-16);
+}
+
+/* =============== Fin FORM ADMIN ============== */
+
+/* =============== Inicio FORM REGISTER ============== */
+
+.register__form {
+    width: clamp(250px, 100%, 450px);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    gap: var(--spacing-28);
+}
+
+/* =============== ¡QUITAR CUANDO ESTE CSS DE LOGIN SUBIDO! ============== */
+.login__title {
+    font-family: var(--font-raleway);
+    font-weight: 700;
+    text-align: center;
+    font-size: var(--font-38-jumbo);
+    letter-spacing: 1px;
+}
+
+/* ======================================================================= */
+
+/* =============== Fin FORM REGISTER ============== */
+
+/* =============== inicio FORM LOGIN ============== */
+.login__form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    gap: var(--spacing-28);
+}
+
+.login__box .form__link {
+    font-size: var(--font-small);
+    text-align: center;
+}
+
+.form__item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: var(--spacing-16);
+}
+
+.form__label {
+    font-family: var(--font-inter);
+    font-size: var(--font-24-large);
+    font-weight: 400;
+}
+
+.form__input {
+    border: none;
+    border-bottom: 2px solid var(--rojo);
+    font-size: var(--font-18-medium);
+    margin: 0 var(--spacing-12);
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+.form__input:focus {
+    outline: none;
+}
+
+.form__input#password,
+.form__input#repeat-password {
+    font-size: var(--font-24-large);
+}
+
+.form__submit {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-36);
+    justify-content: center;
+    margin: var(--spacing-16) 0;
+}
+
+.form__btn {
+    width: 103px;
+    height: 39px;
+    background-color: var(--rojo);
+    border: none;
+    color: var(--fondo-claro);
+    font-size: var(--font-14-xsmall);
+    border-radius: 0;
+    transition: background-color .3s ease;
+}
+
+.form__btn:hover {
+    background-color: var(--rojo-70);
+}
+
+.checkbox__label--login {
+    font-family: var(--font-inter);
+    font-size: var(--font-18-medium);
+    font-weight: 400;
+    padding-left: 4px;
+}
+
+.form-check-login {
+    width: var(--spacing-16);
+    height: var(--spacing-16);
+    border: 2px solid var(--fondo-oscuro);
+    border-radius: 3px;
+}
+
+.form__lost {
+    text-align: center;
+    color: var(--azul);
+    font-size: var(--font-16-small);
+}
+
+.form__lost:hover {
+    color: var(--azul-70);
+}
+
+/* =============== Fin FORM LOGIN ============== */
+
+/* =============== Inicio SHOP FORMS ============== */
+
+.shop__form {
+    font-family: var(--font-inter);
+}
+
+.forms__earch--item input,
+.form__search--item select {
+    font-size: var(--font-18-medium);
+    display: flex;
+    align-items: center;
+}
+
+.checkbox__content {
+    padding: var(--spacing-20);
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox__label {
+    font-size: var(--font-18-medium);
+    padding-left: var(--spacing-8);
+}
+
+.form-check-input {
+    width: var(--spacing-24);
+    height: var(--spacing-24);
+    border: 2px solid var(--fondo-oscuro);
+}
+
+.form-check-input[type=checkbox] {
+    border-radius: 6px;
+}
+
+.form-select-lg {
+    border: 2px solid var(--fondo-oscuro);
+}
+
+.search__icon {
+    color: #30343f;
+    width: 40px;
+    height: 40px;
+}
+
+.shop__form {
+    border-bottom: 1px dotted var(--negro-30);
+}
+
+.form__search {
+    padding: 68px 0;
+    width: clamp(250px, 250px, 100%);
+    margin: auto;
+}
+
+.formsearch--item {
+    gap: var(--spacing-16);
+}
+
+.label__shop {
+    font-size: var(--font-24-large);
+    font-weight: 600;
+}
+
+.precio {
+    margin: var(--spacing-16) 0;
+}
+
+.precio label {
+    font-weight: 600;
+    font-size: var(--font-14-xsmall);
+    padding-right: 10px;
+}
+
+.precio span {
+    padding: 0 8px;
+    font-size: var(--font-16-small);
+}
+
+.precio input {
+    border: 2px solid var(--fondo-oscuro);
+    border-radius: 5px;
+    font-size: var(--font-18-medium);
+    text-align: center;
+}
+
+.btn-create {
+    width: 175px;
+    height: 45px;
+    transition: background-color .3s ease;
+}
+
+.btn-create:hover {
+    color: var(--fondo-claro);
+    background-color: var(--rojo-70);
+}
+
+.discount {
+    width: 50px;
+}
+
+.createdit__files {
+    margin-bottom: var(--spacing-24);
+}
+
+
+/* =============== Fin SHOP FORMS ============== */
+
+/* =============== Inicio EDIT-CREATE ============== */
+
+.createdit__form {
+    font-family: var(--font-inter);
+    max-width: 850px;
+}
+
+.form__cat-lic {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-36);
+    padding: var(--spacing-28) 0;
+}
+
+.form__select {
+    width: 243px;
+    height: 44px;
+    flex-shrink: 0;
+    font-size: var(--font-18-medium);
+}
+
+.form__flex {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-16);
+}
+
+.form__files {
+    font-size: var(--font-14-xsmall);
+}
+
+.createdit__input {
+    width: 280px;
+}
+
+.form__textarea--createdit {
+    width: 100%;
+    margin: var(--spacing-28) 0;
+    border: 1px solid var(--fondo-oscuro);
+    font-family: inherit;
+    font-size: var(--font-18-medium);
+    padding: var(--spacing-12);
+}
+
+.data__input {
+    width: 120px;
+    vertical-align: top;
+}
+
+/* =============== Fin INIT/CREATE ============== */
