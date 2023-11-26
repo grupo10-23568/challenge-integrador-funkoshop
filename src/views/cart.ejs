@@ -1,0 +1,67 @@
+<%- include('../partials/header') %>
+
+    <main class="container main__cart">
+        <section class="cart__content">
+            <h2 class="cart__title">CARRITO DE COMPRAS</h2>
+            <section class="cart__items">
+                <article class="row cart__card cart__card--titles">
+                    <span class="col-2"></span>
+                    <span class="col-5">detalle de producto</span>
+                    <span class="col-3">cantidad</span>
+                    <span class="col-2">total</span>
+                    <span class="col-1"></span>
+                </article>
+                <article class="row cart__card cart__card--prod">
+                    <div class="col-12 col-md-2 col-lg-2">
+                        <img class="cart__item--img" src="../../img/star-wars/baby-yoda-1.webp" alt="">
+                    </div>
+                    <div class="col-12 col-md-5 col-lg-5">
+                        <h2 class="cart__item--name">BABY YODA BLUEBALL</h2>
+                        <p class="cart__item--licence">star wars</p>
+                        <p class="cart__item--price price">Precio unitario: $1799,99</p>
+                    </div>
+                    <div class="col-5 col-md-2 col-lg-2 d-flex">
+                        <input class="items__input items__input--cart" type="text" name="quantity" id="quantityOne"
+                            placeholder="0">
+                        <div class="items__cart--btn">
+                            <button id="addOne" class="items__cart--mas red">+</button>
+                            <button id="substractOne" class="items__cart--menos red">-</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-2 col-lg-2 cart__item--total">$ 3599,98</div>
+                    <a href="" class="col-1 col-md-1 col-lg-1 d-flex justify-content-end"><iconify-icon
+                            class="cart__item--delete" icon="iconoir:delete-circle"></iconify-icon></a>
+                </article>
+            </section>
+        </section>
+
+        <div class="resume">
+            <h2 class="cart__title">RESUMEN</h2>
+        </div>
+        <section class="d-flex flex-column justify-content-end align-items-end">
+            <article>
+                <div class="row cart__card cart__resume">
+                    <div class="col-12 col-md-4 col-lg-6 cart__card--titles">
+                        <p class=" text-left">Cantidad de Elementos</p>
+                        <p class=" text-left">Subtotal</p>
+                        <p class=" text-left">Envío</p>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-6 resume__text">
+                        <p class=" text-right">3</p>
+                        <p class=" text-right">$ 5.399,97</p>
+                        <p class=" text-right">$ 0,00</p>
+                    </div>
+                    <span class="linea p-0"></span>
+                    <div class="col-12 col-md-4 col-lg-6 p-0">
+                        <p class="total-left">TOTAL</p>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-6 p-0">
+                        <p class="total-right">$5.399,97</p>
+                    </div>
+                </div>
+                <button class="col-12 col-md-4 col-lg-6 cart__pay w-100">ir a pagar</button>
+            </article>
+        </section>
+    </main>
+
+    <%- include('../partials/footer') %>
