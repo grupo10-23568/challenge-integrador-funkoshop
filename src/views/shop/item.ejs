@@ -1,0 +1,45 @@
+<%- include('../partials/header') %>
+
+    <main class="main-container container">
+        <section class="items">
+            <article class="row items__content card-item">
+                <picture class="col-md-6 item__img card-item__cover">
+                    <img class="card-item__img--front" src="../../img/<%= item.image_front %>"
+                        alt="<%= item.product_description %>">
+                    <img class="card-item__img--back" src="../../img/<%= item.image_front %>"
+                        alt="<%= item.product_description %>">
+                </picture>
+
+                <div class="col-md-6 items__details">
+                    <p class="items_licence">
+                        <%= item.licence_name %>
+                    </p>
+                    <h3 class="items__name">
+                        <%= item.product_name %>
+                    </h3>
+                    <p class="items__text">
+                        <%= item.product_description %>
+                    </p>
+                    <p class="items__price">$
+                        <%= item.price %>
+                    </p>
+                    <div class="items__cart">
+                        <input class="items__input" type="text" name="quantity" id="quantity" placeholder="0">
+                        <div class="items__cart--btn">
+                            <button id="add" class="items__cart--mas">+</button>
+                            <button id="substract" class="items__cart--menos">-</button>
+                        </div>
+                        <!-- <form action="<%= item.product_id %>/add" method="post"> -->
+                        <form action="/shop/item/<%= item.product_id %>/add" method="post">
+                            <button type="submit" class="items__addcart">Agregar al carrito</button>
+                        </form>
+                    </div>
+                    <p class="items__promo"><a href="#">Ver metodos de pago </a> - 3 CUOTAS SIN INTERÉS</p>
+                </div>
+            </article>
+        </section>
+
+        <%- include('../partials/sliders') %>
+    </main>
+
+    <%- include('../partials/footer') %>
