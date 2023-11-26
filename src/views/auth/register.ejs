@@ -1,0 +1,41 @@
+<%- include('../partials/header') %>
+
+    <main id="login" class="register__box container">
+        <h2 class="login__title">CREA TU CUENTA</h2>
+        <p class="description__register">Completa el formulario para ser parte del mundo de los Funkos</p>
+
+        <form class="register__form" action="" method="post">
+            <div class="form__item">
+                <label for="name" class="form__label">Nombre:</label>
+                <input class="form__input" type="text" name="name" id="name" placeholder="John">
+            </div>
+            <div class="form__item">
+                <label for="last-name" class="form__label">Apellido:</label>
+                <input class="form__input" type="text" name="last-name" id="last-name" placeholder="Doe">
+            </div>
+            <div class="form__item">
+                <label for="email" class="form__label">Email:</label>
+                <input class="form__input" type="email" name="email" id="email" placeholder="johndoe@correo.com">
+            </div>
+            <div class="form__item">
+                <label for="password" class="form__label">Contraseña:</label>
+                <input class="form__input" type="password" name="password" id="password"
+                    placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
+            </div>
+            <div class="form__item">
+                <label for="repeat-password" class="form__label">Repita Contraseña:</label>
+                <input class="form__input" type="password" name="repeat-password" id="repeat-password"
+                    placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
+            </div>
+            <div class="form__submit">
+                <input class="form__btn" type="submit" value="Registrar">
+                <div class="form__remember">
+                    <input class="form-check-login" type="checkbox" name="remember" id="remember">
+                    <label class="checkbox__label--login" for="accept">Acepto <a href=""><span class="terms">Téminos y
+                                Condiciones</span></a></label>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <%- include('../partials/footer') %>
