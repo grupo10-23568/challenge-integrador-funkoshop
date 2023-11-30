@@ -35,7 +35,7 @@ Coordinación por sorteo de las secciones a realizar y aporte conjunto a modific
 ### 3º etapa:
 Desarrollo de las partes en código y subida al repositorio para testeo del grupo y finalmente, integración a la rama raiz.
 
-Nuestro equipo siguió un proceso de desarrollo estructurado. En reuniones semanales, discutimos misiones del coordinador y avanzamos con lo aprendido en clase e investigando la documentación en conjunto e individualmente. Debatimos y acordamos código y parámetros comunes para mantener consistencia en nombres, clases, etiquetas, ids y estructura del código, ajustándolo a las especificaciones sugerida y solicitadas en las Missions. Cada miembro escribió y verificó el proyecto localmente, realizando pull requests y merges al repositorio principal una vez que estuvo funcionando correctamente. Este enfoque creemos que nos llevó a un desarrollo coherente y funcional del proyecto.
+Nuestro equipo siguió un proceso de desarrollo estructurado. En reuniones semanales, discutimos misiones del coordinador y avanzamos con lo aprendido en clase e investigando la documentación en conjunto e individualmente. Debatimos y acordamos código y parámetros comunes para mantener consistencia en nombres, clases, etiquetas, ids y estructura del código, ajustándolo a las especificaciones sugeridas y solicitadas en las Missions. Cada miembro escribió su parte de código y verificó el proyecto localmente, realizando pull requests y merges al repositorio principal después de confirmar que estaba funcionando correctamente. Este enfoque, creemos que nos llevó a un desarrollo efectivo, ordenado y funcional del proyecto.
 
 ## ✍️Grupo de trabajo
 
