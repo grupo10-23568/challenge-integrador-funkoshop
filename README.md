@@ -45,8 +45,6 @@ Nuestro equipo siguió un proceso de desarrollo estructurado. En reuniones seman
 - Vicence Saa
 - Federico Ariel Rosciano Engel
 - Silvia Veronelli
-- Brenda Villegas
-- Ariel Orlando Silva Mayta
 
 ## 👁️Estructura del sitio Full Stack:
 ```plaintext
