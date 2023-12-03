@@ -4,7 +4,7 @@
         <form action="" class="form__admin">
             <iconify-icon icon="ion:search-sharp" class="search__icon"></iconify-icon>
             <input class="search__input" type="text" name="search-admin" id="search-admin"
-                placeholder="código, nombre o categoría">
+                placeholder="código, nombre, licencia o categoría">
         </form>
         <section class="listado__head">
             <h1 class="listado__title">LISTADO DE PRODUCTOS</h1>
@@ -24,6 +24,7 @@
                                 <th scope="col-1">ID</th>
                                 <th scope="col-3">Código</th>
                                 <th scope="col-3">Nombre del Producto</th>
+                                <th scope="col-3">Licencia</th>
                                 <th scope="col-3">Categoría</th>
                                 <th scope="col-1"></th>
                                 <th scope="col-1"></th>
@@ -40,6 +41,9 @@
                                     </td>
                                     <td>
                                         <%= item.product_name %>
+                                    </td>
+                                    <td>
+                                        <%= item.licence_name %>
                                     </td>
                                     <td>
                                         <%= item.category_name %>
