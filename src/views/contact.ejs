@@ -2,7 +2,7 @@
 
     <main class="container">
         <h2 class="contact__title">Contacto</h2>
-        <form class="contact__form" id="contactForm">
+        <form class="contact__form" id="contactForm" action="" method="POST">
             <!-- Nombre -->
             <div class="contact__item col-6">
                 <label class="form-label contact__subtitle" for="name">Nombre</label>
@@ -34,7 +34,10 @@
             <div class="col-2 d-grid">
                 <button class="contact__button" type="submit">Enviar</button>
             </div>
-
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="Consulta desde BookShop">
+            <input type="hidden" name="_template" value="table">
         </form>
     </main>
 

@@ -23,7 +23,7 @@ app.use((req, res, next) => {
 
 // Configuracion de EJS
 app.set('view engine', 'ejs');
-app.set('views', path.resolve(__dirname, './src/views'));
+app.set('views', path.join(__dirname, './src/views'));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -31,7 +31,7 @@ app.use(express.json());
 app.use(methodOverride('_method'));
 
 app.get('/', (req, res) => {
-    res.redirect('/home'); // Redirige a /home
+    res.redirect('/home');
 });
 
 // Middleware a nivel de ruta
