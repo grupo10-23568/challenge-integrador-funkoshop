@@ -29,7 +29,6 @@ const shopControllers = {
     addToCart: async (req, res) => {
         const id = req.params.id;
         const item = await ItemsService.getItem(id);
-        console.log(item);
 
         if (item.data.length > 0) {
             // Agrega el item al carrito directamente en el controlador
