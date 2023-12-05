@@ -54,6 +54,10 @@ main.admin {
     font-size: var(--font-18-medium);
 }
 
+.col {
+    padding-bottom: var(--spacing-68);
+}
+
 .td__icon--edit,
 .td__icon--delete {
     cursor: pointer;
@@ -83,7 +87,6 @@ th.id {
 .btn__edit--item {
     border: none;
     background-color: transparent;
-
 }
 
 /* PAGINA EDIT */

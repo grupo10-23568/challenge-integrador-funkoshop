@@ -22,10 +22,11 @@
                         <thead>
                             <tr>
                                 <th scope="col-1">ID</th>
-                                <th scope="col-3">Código</th>
-                                <th scope="col-3">Nombre del Producto</th>
-                                <th scope="col-3">Licencia</th>
-                                <th scope="col-3">Categoría</th>
+                                <th scope="col-1">Código</th>
+                                <th scope="col-2">Nombre del Producto</th>
+                                <th scope="col-2">Licencia</th>
+                                <th scope="col-2">Categoría</th>
+                                <th scope="col-2">Precio</th>
                                 <th scope="col-1"></th>
                                 <th scope="col-1"></th>
                             </tr>
@@ -48,6 +49,9 @@
                                     <td>
                                         <%= item.category_name %>
                                     </td>
+                                    <td>
+                                        <%= item.price %>
+                                    </td>
                                     <td><a href="/admin/edit/<%= item.product_id %>">
                                             <iconify-icon class="td__icon--edit"
                                                 icon="material-symbols:edit"></iconify-icon>
@@ -65,7 +69,7 @@
                                 </tr>
                                 <% }); %>
                         </tbody>
-                    </table>
+                    </table><br>
                 </div>
             </div>
         </section>
