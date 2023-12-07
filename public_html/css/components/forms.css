@@ -80,6 +80,10 @@
     margin: 0 var(--spacing-12);
 }
 
+.form-control-lg {
+    font-size: var(--font-18-medium);
+}
+
 input:focus::placeholder {
     color: transparent;
 }

@@ -1,16 +1,29 @@
 const ItemsService = require('../services/itemServices');
 
 const shopControllers = {
+    // Integrada paginacion
     shopView: async (req, res) => {
-        const items = await ItemsService.getAllItems();
-        const { data } = items;
-        res.render('../views/shop/shop', {
-            view: {
-                title: "Shop | Funkoshop"
-            },
-            items: data
-        });
+        try {
+            const { page = 1, limit = 9 } = req.query; // Puedes ajustar el límite según tus necesidades
+
+            // Obtén los datos paginados
+            const paginatedItems = await ItemsService.getPaginated(page, limit);
+            const { data, totalPages } = paginatedItems;
+
+            res.render('../views/shop/shop', {
+                view: {
+                    title: "Shop | Funkoshop"
+                },
+                items: data,
+                totalPages,
+                currentPage: parseInt(page),
+            });
+        } catch (error) {
+            console.error('Error en shopView:', error);
+            res.status(500).send('Error interno del servidor');
+        }
     },
+
     itemView: async (req, res) => {
         const id = req.params.id;
         const item = await ItemsService.getItem(id);
