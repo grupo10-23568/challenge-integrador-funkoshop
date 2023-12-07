@@ -83,15 +83,29 @@
                         </li>
                         <% }) %>
                             <div class="pagination">
-                                <a class="pagination__link" href="#">&lt;</a>
-                                <a class="pagination__link pagination__link--selected" href="#">1</a>
-                                <a class="pagination__link" href="#">2</a>
-                                <a class="pagination__link" href="#">3</a>
-                                <a class="pagination__link" href="#">4</a>
-                                <a class="pagination__link" href="#">5</a>
-                                <a class="pagination__link" href="#">&gt;</a>
+                                <% if (currentPage> 1) { %>
+                                    <a class="pagination__link" href="/shop?page=<%= currentPage - 1 %>">&lt;</a>
+                                    <% } %>
+
+                                        <% for (let i=1; i <=totalPages; i++) { %>
+                                            <% if (i===currentPage) { %>
+                                                <a class="pagination__link pagination__link--selected" href="#">
+                                                    <%= i %>
+                                                </a>
+                                                <% } else { %>
+                                                    <a class="pagination__link" href="/shop?page=<%= i %>">
+                                                        <%= i %>
+                                                    </a>
+                                                    <% } %>
+                                                        <% } %>
+
+                                                            <% if (currentPage < totalPages) { %>
+                                                                <a class="pagination__link"
+                                                                    href="/shop?page=<%= currentPage + 1 %>"">&gt;</a>
+                                                    <% } %>
                             </div>
                 </ul>
+                <%- console.log(" currentPage:", currentPage, "totalPages:" , totalPages) %>
             </article>
 
         </section>

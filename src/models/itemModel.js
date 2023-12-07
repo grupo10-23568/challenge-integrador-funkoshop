@@ -132,7 +132,49 @@ const deleteItem = async (params) => {
     }
 };
 
+// Paginación de productos
+const getPaginated = async (offset, limit) => {
+    try {
+        const [rows] = await conn.query(
+            'SELECT product.*, category.category_name, licence.licence_name ' +
+            'FROM (product LEFT JOIN category ON product.category_id = category.category_id) ' +
+            'LEFT JOIN licence ON product.licence_id = licence.licence_id ' +
+            'LIMIT ?, ?;',
+            [offset, limit]
+        );
 
+        const response = {
+            isError: false,
+            data: rows
+        };
+
+        return response;
+    } catch (error) {
+        const errorResponse = {
+            isError: true,
+            message: `Error al obtener datos paginados: ${error}`
+        };
+
+        return errorResponse;
+    }
+};
+
+const getTotalItems = async () => {
+    try {
+        const [rows] = await conn.query('SELECT COUNT(*) AS total FROM product');
+        const response = {
+            isError: false,
+            data: rows[0].total
+        };
+        return response;
+    } catch (e) {
+        const error = {
+            isError: true,
+            message: `Error al obtener el total de elementos: ${e}`
+        };
+        return error;
+    }
+};
 
 module.exports = {
     getAll,
@@ -141,5 +183,7 @@ module.exports = {
     createItem,
     editItem,
     deleteItem,
-    getAllItemsLicences
+    getAllItemsLicences,
+    getPaginated,
+    getTotalItems
 }

@@ -61,6 +61,31 @@ const deleteItem = async (id) => {
     return await ItemModel.deleteItem({ product_id: id });
 }
 
+// Paginación de productos
+const getPaginated = async (page, limit) => {
+    try {
+        const totalItemsResponse = await ItemModel.getAll();
+        const totalItems = totalItemsResponse.data.length;
+
+        const totalPages = Math.ceil(totalItems / limit);
+
+        const offset = (page - 1) * limit;
+        const response = await ItemModel.getPaginated(offset, limit);
+
+        return {
+            isError: false,
+            data: response.data,
+            totalPages
+        };
+    } catch (error) {
+        console.error('Error en getPaginated:', error);
+        return {
+            isError: true,
+            message: 'Error al obtener datos paginados.'
+        };
+    }
+};
+
 module.exports = {
     getAllItems,
     getOne,
@@ -69,4 +94,5 @@ module.exports = {
     editItem,
     deleteItem,
     getLicences,
+    getPaginated,
 }
