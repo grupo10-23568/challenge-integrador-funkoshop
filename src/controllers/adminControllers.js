@@ -70,7 +70,6 @@ const adminControllers = {
             },
             item: data[0],
             categories,
-            prices,
             licences
         });
     },
