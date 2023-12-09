@@ -6,7 +6,7 @@ const cartControllers = {
         try {
             const id = req.params.id;
             const item = await ItemsService.getItem(id);
-            const files = req.files || [];
+            const files = req.files || []; // Asegúrate de que files esté definido y sea un array
 
             if (item.data.length > 0) {
                 // Agrega el artículo al carrito y actualiza req.session.cart
@@ -24,7 +24,7 @@ const cartControllers = {
 
     cart: (req, res) => {
         try {
-            // Renderiza con los elementos del carrito almacenados
+            // Renderiza la página cart.ejs con los elementos del carrito almacenados en la sesión
             const cartItems = req.session.cart || [];
 
             res.render('../views/shop/cart', {
@@ -43,15 +43,15 @@ const cartControllers = {
         const itemId = req.params.id;
         const newQuantity = parseInt(req.body.quantity);
 
-        // Verifica el carrito en la sesion
+        // Verifica si el carrito está en la sesión
         if (!req.session.cart) {
             return res.status(400).send('El carrito no está disponible.');
         }
 
-        // Busca el id
+        // Busca el índice del elemento en el carrito
         const itemIndex = req.session.cart.findIndex(item => item.product_id === itemId);
 
-        // Verifica si el artículo ya está en el carrito
+        // Verifica si el artículo está en el carrito
         if (itemIndex === -1) {
             return res.status(404).send('El artículo no está en el carrito.');
         }
@@ -76,8 +76,12 @@ const cartControllers = {
                 return res.status(404).json({ message: 'No hay carrito en la sesión.' });
             }
 
+            console.log('Cart before deletion:', req.session.cart);
+
             // Filtra los productos que no coinciden con el ID proporcionado
             req.session.cart = req.session.cart.filter(item => item.product_id !== itemId);
+
+            console.log('Cart after deletion:', req.session.cart);
 
             // Retorna un mensaje de éxito junto con el carrito actualizado
             res.status(200).json({

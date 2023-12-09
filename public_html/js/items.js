@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     substract.addEventListener('click', () => {
         const currentQuantity = Number(quantity.value);
-        if (currentQuantity > 0) {
+        if (currentQuantity > 1) {
             quantity.value = currentQuantity - 1;
         } else {
-            quantity.value = 0;
+            quantity.value = 1;
         }
     });
 });

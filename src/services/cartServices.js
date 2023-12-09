@@ -4,10 +4,10 @@ class CartService {
         const existingItemIndex = cart.findIndex(cartItem => cartItem.product_id === item.product_id);
 
         if (existingItemIndex !== -1) {
-            // Si el artículo ya está en el carrito, actualiza la cantidad según la cantidad proporcionada
+            // Si el artículo ya está en el carrito, actualiza la cantidad
             cart[existingItemIndex].quantity += quantity;
         } else {
-            // Si no está en el carrito, agrégalo con la cantidad proporcionada
+            // Si no está en el carrito, se agrega la cantidad solicitada
             cart.push({
                 product_id: item.product_id,
                 image_front: item.image_front,
