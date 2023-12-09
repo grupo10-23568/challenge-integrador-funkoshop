@@ -1,5 +1,7 @@
 # Challenge Integrador Funkoshop
 
+![funkoshop-g10-23568 onrender com_home (1)](https://github.com/grupo10-23568/challenge-integrador-funkoshop/assets/146775217/11260e43-8080-49e7-af43-bbd2e011d033)
+
 ## Proyecto Final Codo a Codo 2023
 
 El objetivo de este proyecto es contar con un espacio autodidacta y autogestionado que le permita al estudiante consolidar el proceso de aprendizaje de los temas vistos a lo largo de la cursada a través de la práctica con un fin común y particular.
