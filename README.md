@@ -58,6 +58,7 @@ Nuestro equipo siguió un proceso de desarrollo estructurado. En reuniones seman
 ├── /controllers
 │   ├── /adminControllers.js
 │   ├── /authControllers.js
+│   ├── /cartControllers.js
 │   ├── /mainControllers.js
 │   └── /shopControllers.js
 ├── /middlewares
@@ -74,6 +75,7 @@ Nuestro equipo siguió un proceso de desarrollo estructurado. En reuniones seman
 │   ├── /mainRoutes.js
 │   └── /shopRoutes.js
 ├── /services
+│   ├── /cartServices.js
 │   ├── /categoryServices.js
 │   ├── /itemServices.js
 │   └── /licenceServices.js
