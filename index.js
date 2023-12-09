@@ -39,5 +39,6 @@ app.use('/', mainRoutes);
 app.use('/shop', shopRoutes);
 app.use('/admin', adminRoutes);
 app.use('/auth', authRoutes);
+app.use('/cart', shopRoutes);
 
 app.listen(PORT, () => console.log(`Servidor corriendo en http://localhost:${PORT}...`));

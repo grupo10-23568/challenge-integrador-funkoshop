@@ -80,12 +80,14 @@ h2.cart__title {
     text-align: right;
 }
 
-/* .cart__item--delete {
+.cart__delete {
     width: 28px;
     height: 28px;
     cursor: pointer;
+    border: none;
+    background-color: transparent;
     transition: color .3s ease;
-} */
+}
 
 .cart__item--delete {
     color: red;
