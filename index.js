@@ -3,6 +3,7 @@ const app = express();
 const path = require('path');
 const methodOverride = require('method-override');
 const initSession = require('./src/utils/session');
+const cors = require('cors');
 
 require('dotenv').config();
 
