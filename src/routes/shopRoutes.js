@@ -1,12 +1,14 @@
 const express = require('express');
 const shopControllers = require('../controllers/shopControllers');
+const cartControllers = require('../controllers/cartControllers');
 const router = express.Router();
 
 router.get('/', shopControllers.shopView);
 router.get('/item/:id', shopControllers.itemView);
-router.post('/item/:id/add', shopControllers.addToCart);
-router.get('/cart', shopControllers.cart);
-router.post('/cart', shopControllers.checkout);
+router.post('/item/:id/add', cartControllers.addToCart);
+router.get('/cart', cartControllers.cart);
+router.post('/cart', cartControllers.checkout);
+router.delete('/cart/:id/delete', cartControllers.deleteCartItem);
 
 
 
