@@ -27,7 +27,7 @@ Para lograr este objetivo, deberás utilizar las siguientes
 
 ## 🧑‍💻Metodología de trabajo en equipo
 ### 1º etapa:
-Reuniones para coordinación de estructura y parámetros comúnes del sitio basados en cada Mission.
+Reuniones para coordinación de estructura y parámetros comunes del sitio basados en cada Mission.
 
 ### 2º etapa:
 Coordinación por sorteo de las secciones a realizar y aporte conjunto a modificaciones y sugerencias sobre todas las tareas en general.
