@@ -89,6 +89,7 @@ h2.cart__title {
     transition: color .3s ease;
 }
 
+
 .cart__item--delete {
     color: red;
     font-size: var(--font-24-large);
