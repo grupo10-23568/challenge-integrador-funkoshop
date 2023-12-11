@@ -78,7 +78,7 @@
                         .then(data => {
                             updateCartCount();
 
-                    }).then(response => response.json()) // Parsea la respuesta como JSON
+                        }).then(response => response.json()) // Parsea la respuesta como JSON
                         .then(data => {
 
                             // Actualizar la cantidad en el ícono de carrito
@@ -98,10 +98,7 @@
                         .then(data => {
                             const cartCountElement = document.getElementById('cart-count');
                             if (cartCountElement) {
-
                                 cartCountElement.textContent = data.cartCount;
-
-                                cartCountElement.textContent = data.cartCount; // Ajusta según la estructura de tu respuesta
                             }
                         })
                         .catch(error => {
