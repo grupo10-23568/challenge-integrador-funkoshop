@@ -176,6 +176,44 @@ const getTotalItems = async () => {
     }
 };
 
+
+// Pagina de carrito
+const updateQuantity = async (productId, newQuantity) => {
+    try {
+        const [rows] = await conn.query('UPDATE product SET quantity = ? WHERE product_id = ?;', [newQuantity, productId]);
+        const response = {
+            isError: false,
+            message: `Cantidad actualizada exitosamente.`,
+            status: rows
+        };
+        return response;
+    } catch (e) {
+        const error = {
+            isError: true,
+            message: `Error al actualizar la cantidad: ${e}`
+        };
+        return error;
+    }
+};
+
+const deleteCart = async (productId) => {
+    try {
+        const [rows] = await conn.query('DELETE FROM product WHERE product_id = ?;', [productId]);
+        const response = {
+            isError: false,
+            data: rows,
+            message: `Producto eliminado exitosamente.`
+        };
+        return response;
+    } catch (e) {
+        const error = {
+            isError: true,
+            message: `Error al eliminar el producto del carrito: ${e}`
+        };
+        return error;
+    }
+};
+
 module.exports = {
     getAll,
     getOne,
@@ -185,5 +223,7 @@ module.exports = {
     deleteItem,
     getAllItemsLicences,
     getPaginated,
-    getTotalItems
+    getTotalItems,
+    updateQuantity,
+    deleteCart,
 }
