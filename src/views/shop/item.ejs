@@ -73,22 +73,9 @@
                             'Content-Type': 'application/json',
                         },
                         body: JSON.stringify({ quantity }),
-
                     }).then(response => response.json())
                         .then(data => {
                             updateCartCount();
-
-<<<<<<< HEAD
-                        }).then(response => response.json()) // Parsea la respuesta como JSON
-=======
-                    }).then(response => response.json()) // Parsea la respuesta como JSON
->>>>>>> e7281c01b2d070a8e5dcfea88f002f3459e3b12c
-                        .then(data => {
-
-                            // Actualizar la cantidad en el ícono de carrito
-                            updateCartCount();
-                            // Redirigir a la URL proporcionada en la respuesta del servidor
-
                             window.location.href = data.redirectUrl;
                         }).catch(error => {
                             console.error('Error al agregar al carrito:', error);
@@ -102,9 +89,6 @@
                         .then(data => {
                             const cartCountElement = document.getElementById('cart-count');
                             if (cartCountElement) {
-
-                                cartCountElement.textContent = data.cartCount;
-
                                 cartCountElement.textContent = data.cartCount; // Ajusta según la estructura de tu respuesta
                             }
                         })
