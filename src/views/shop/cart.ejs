@@ -37,6 +37,10 @@
                                     class="items__cart--menos red">-</button>
                             </div>
                         </div>
+
+
+                        <!-- <div class="col-6 col-md-2 col-lg-2 cart__item--total">$ <%= item.total %> -->
+
                         <div class="col-6 col-md-2 col-lg-2 cart__item--total" id="<%= 'total' + item.product_id %>">$
                             <%= item.total %>
                         </div>
@@ -183,7 +187,10 @@
                                                             .then(response => response.json())
                                                             .then(data => {
                                                                 if (data.success) {
+
                                                                     // Recarga al eliminar el carrito
+
+                                                                    // Recarga la página automáticamente después de eliminar el elemento del carrito
                                                                     location.reload();
                                                                 } else {
                                                                     console.error('Error al eliminar el artículo del carrito:', data.error);
