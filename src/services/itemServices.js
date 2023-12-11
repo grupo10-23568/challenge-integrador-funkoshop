@@ -122,6 +122,8 @@ const updateQuantity = async (productId, newQuantity) => {
 // Servicio para eliminar un producto del carrito
 const deleteCart = async (productId) => {
     try {
+        // Elimina el producto del carrito en la base de datos
+
         // Lógica para eliminar el producto del carrito en la base de datos
         await ItemModel.deleteCart(productId);
         const response = {

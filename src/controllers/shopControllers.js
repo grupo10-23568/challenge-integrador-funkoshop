@@ -95,7 +95,78 @@ const shopControllers = {
         }
     },
 
-    // shopControllers.js
+    addToCart: async (req, res) => {
+        try {
+            const productId = req.params.id;
+            const quantity = req.body.quantity || 1;
+
+            req.session.cart = req.session.cart || [];
+            const cartItemIndex = req.session.cart.findIndex(item => String(item.product_id) === String(productId));
+
+            if (cartItemIndex !== -1) {
+                // Actualiza si el item está en el carrito
+                req.session.cart[cartItemIndex].quantity += parseInt(quantity);
+                req.session.cart[cartItemIndex].total = req.session.cart[cartItemIndex].price * req.session.cart[cartItemIndex].quantity;
+            } else {
+
+                const itemResponse = await ItemsService.getItem(productId);
+
+                if (!itemResponse || !itemResponse.data || itemResponse.data.length === 0) {
+                    console.error(`Error: No se encontró el producto con ID ${productId}`);
+                    res.status(404).send('Producto no encontrado');
+                    return;
+                }
+
+                const item = itemResponse.data[0];
+
+                const newItem = {
+                    product_id: item.product_id,
+                    image_front: item.image_front,
+                    product_name: item.product_name,
+                    licence_name: item.licence_name,
+                    price: item.price,
+                    quantity: parseInt(quantity),
+                    total: item.price * parseInt(quantity)
+                };
+
+                req.session.cart.push(newItem);
+            }
+
+            // console.log('Después de la lógica de agregado:', req.session.cart);
+
+            // Redireccionar a la página del carrito después de agregar
+            res.json({ redirectUrl: '/shop/cart' });
+        } catch (error) {
+            console.error('Error en addToCart:', error);
+            res.status(500).send('Error interno del servidor');
+        }
+    },
+
+    },
+
+    getCart: async (req, res) => {
+        try {
+            // Obtener productos en el carrito junto con su información
+            const userId = req.session.userId;
+            const [rows] = await conn.query('SELECT product.*, cart.quantity FROM product JOIN cart ON product.product_id = cart.product_id WHERE cart.user_id = ?;', [userId]);
+
+            const response = {
+                isError: false,
+                data: rows
+            };
+
+            res.render('../views/shop/cart', {
+                view: {
+                    title: "Carrito de Compras | Funkoshop"
+                },
+                cart: response.data,
+            });
+        } catch (error) {
+            console.error('Error en getCart:', error);
+            res.status(500).send('Error interno del servidor');
+        }
+    },
+
     addToCart: async (req, res) => {
         try {
             const productId = req.params.id;
@@ -145,7 +216,7 @@ const shopControllers = {
             res.status(500).send('Error interno del servidor');
         }
     },
-
+      
     getCartCount: (req, res) => {
         try {
             const cart = req.session.cart || [];
