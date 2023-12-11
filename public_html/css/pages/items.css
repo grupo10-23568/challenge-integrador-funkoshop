@@ -1,3 +1,4 @@
+/* PAGINA DE ITEMS */
 .items__content {
     font-family: var(--font-inter);
     display: flex;
@@ -43,8 +44,20 @@
 }
 
 .items__cart {
+    display: flex;
+    align-items: center;
     padding: var(--spacing-20) 0;
     display: flex;
+}
+
+.items__input {
+    -moz-appearance: textfield;
+}
+
+.items__input::-webkit-inner-spin-button,
+.items__input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .items__input {

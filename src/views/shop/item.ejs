@@ -23,17 +23,20 @@
                     <p class="items__price">$
                         <%= item.price %>
                     </p>
+
                     <div class="items__cart">
-                        <input class="items__input" type="text" name="quantity" id="quantity" placeholder="0">
-                        <div class="items__cart--btn">
-                            <button id="add" class="items__cart--mas">+</button>
-                            <button id="substract" class="items__cart--menos">-</button>
-                        </div>
-                        <!-- <form action="<%= item.product_id %>/add" method="post"> -->
-                        <form action="/shop/item/<%= item.product_id %>/add" method="post">
-                            <button type="submit" class="items__addcart">Agregar al carrito</button>
+                        <form class="items__cart" id="addToCartForm" action="/shop/item/<%= item.product_id %>/add"
+                            method="post">
+                            <input class="items__input" type="number" name="quantity" id="quantity" value="1"
+                                placeholder="1">
+                            <div class="items__cart--btn">
+                                <button type="button" id="add" class="items__cart--mas">+</button>
+                                <button type="button" id="subtract" class="items__cart--menos">-</button>
+                            </div>
+                            <button type="button" id="addToCartBtn" class="items__addcart">Agregar al carrito</button>
                         </form>
                     </div>
+
                     <p class="items__promo"><a href="#">Ver metodos de pago </a> - 3 CUOTAS SIN INTERÉS</p>
                 </div>
             </article>
@@ -43,3 +46,59 @@
     </main>
 
     <%- include('../partials/footer') %>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const addToCartBtn = document.getElementById('addToCartBtn');
+                const quantityInput = document.getElementById('quantity');
+                const addBtn = document.getElementById('add');
+                const subtractBtn = document.getElementById('subtract');
+
+                addBtn.addEventListener('click', function () {
+                    const currentValue = parseInt(quantityInput.value) || 0;
+                    quantityInput.value = currentValue + 1;
+                });
+
+                subtractBtn.addEventListener('click', function () {
+                    const currentValue = parseInt(quantityInput.value) || 0;
+                    quantityInput.value = currentValue > 1 ? currentValue - 1 : 1;
+                });
+
+                addToCartBtn.addEventListener('click', function () {
+                    const quantity = parseInt(quantityInput.value) || 1;
+
+                    fetch(`/shop/item/<%= item.product_id %>/add`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ quantity }),
+                    }).then(response => response.json())
+                        .then(data => {
+                            updateCartCount();
+                            window.location.href = data.redirectUrl;
+                        }).catch(error => {
+                            console.error('Error al agregar al carrito:', error);
+                        });
+                });
+
+                function updateCartCount() {
+                    // Obtener la cantidad actual del carrito desde el servidor
+                    fetch('/shop/cart/count')
+                        .then(response => response.json())
+                        .then(data => {
+                            const cartCountElement = document.getElementById('cart-count');
+                            if (cartCountElement) {
+                                cartCountElement.textContent = data.cartCount; // Ajusta según la estructura de tu respuesta
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error al obtener la cantidad del carrito:', error);
+                        });
+                }
+            });
+
+            document.addEventListener('DOMContentLoaded', function () {
+                updateCartCount();
+            });
+        </script>
