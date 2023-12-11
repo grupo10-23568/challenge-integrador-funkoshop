@@ -89,7 +89,7 @@
                         .then(data => {
                             const cartCountElement = document.getElementById('cart-count');
                             if (cartCountElement) {
-                                cartCountElement.textContent = data.cartCount; // Ajusta según la estructura de tu respuesta
+                                cartCountElement.textContent = data.cartCount;
                             }
                         })
                         .catch(error => {
