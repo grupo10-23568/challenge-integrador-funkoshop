@@ -11,6 +11,7 @@ const {
     logoutUser
 } = require('../controllers/authControllers');
 
+// Ruta temporal para probar la conexión a la base de datos. Eliminar después de la prueba.
 const loginValidation = [
     body('email')
         .isEmail()
@@ -24,6 +25,8 @@ router.post('/temp', (req, res) => {
     console.log(req.body);
     res.send('¡Funciona!');
 });
+
+// Configuración de las rutas de autenticación
 router.get('/login', loginView);
 router.post('/login', loginValidation, validateInput, loginUser);
 router.get('/register', registerView);

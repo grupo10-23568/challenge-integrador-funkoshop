@@ -1,8 +1,11 @@
+// Middleware que verifica si el usuario está autentificado
+
 const isLogged = (req, res, next) => {
+    // Si está logueado, continúa con la ruta
     if (req.session.isLogged) {
         return next();
     }
-
+    // Si no lo está, devuelve estado 401 y mensaje
     return res.status(401).send('Necesitas loguearte para ingresar');
 }
 

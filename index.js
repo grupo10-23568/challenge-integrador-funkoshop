@@ -14,6 +14,7 @@ const mainRoutes = require('./src/routes/mainRoutes');
 const shopRoutes = require('./src/routes/shopRoutes');
 const authRoutes = require('./src/routes/authRoutes');
 
+// Configuración de Middlewares
 app.use(express.static(path.resolve(__dirname, 'public_html')));
 
 app.use(initSession());
@@ -43,4 +44,5 @@ app.use('/admin', adminRoutes);
 app.use('/auth', authRoutes);
 app.use('/cart', shopRoutes);
 
+// Configuración de puerto en escucha
 app.listen(PORT, () => console.log(`Servidor corriendo en http://localhost:${PORT}...`));

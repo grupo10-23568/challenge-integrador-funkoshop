@@ -1,6 +1,7 @@
 const ItemsService = require('../services/itemServices');
 
 const shopControllers = {
+    // Muestra la vista principal de la tienda con paginación de productos
     shopView: async (req, res) => {
         try {
             const { page = 1, limit = 9 } = req.query;
@@ -23,6 +24,7 @@ const shopControllers = {
         }
     },
 
+    // Muestra la vista detallada de un producto y el slider de productos filtrados por Licencia
     itemView: async (req, res) => {
         try {
             const id = req.params.id;
@@ -38,7 +40,7 @@ const shopControllers = {
                 return;
             }
 
-            // Filtra los items para incluir solo aquellos de la misma licencia
+            // Filtra los items para incluir solo aquellos de la misma licencia y se asegura que no incluya el item principal
             const relatedItems = allItems.filter(i => i.licence_id === item[0].licence_id && i.product_id !== item[0].product_id);
 
             res.render('./shop/item', {
@@ -56,6 +58,7 @@ const shopControllers = {
         }
     },
 
+    // Muestra la vista del carrito de compras
     cart: async (req, res) => {
         try {
             const cart = req.session.cart || [];
@@ -72,6 +75,7 @@ const shopControllers = {
         }
     },
 
+    // Contabiliza las cantidades para los calculos
     getCart: async (req, res) => {
         try {
             // Obtener productos en el carrito junto con su información
@@ -95,6 +99,7 @@ const shopControllers = {
         }
     },
 
+    // Agrega un producto al carrito de compras desde la vista Item
     addToCart: async (req, res) => {
         try {
             const productId = req.params.id;
@@ -134,7 +139,7 @@ const shopControllers = {
 
             // console.log('Después de la lógica de agregado:', req.session.cart);
 
-            // Redireccionar a la página del carrito después de agregar
+            // Redirecciona a la página del carrito después de agregar item
             res.json({ redirectUrl: '/shop/cart' });
         } catch (error) {
             console.error('Error en addToCart:', error);
@@ -154,6 +159,7 @@ const shopControllers = {
         }
     },
 
+    // Actualiza las cantidades a medida que se agregan o quitan
     updateQuantity: async (req, res) => {
         try {
             const productId = req.params.productId;
@@ -186,6 +192,7 @@ const shopControllers = {
         }
     },
 
+    // Elimina un producto del carrito de compras
     deleteCart: async (req, res) => {
         try {
             const productId = req.params.id;

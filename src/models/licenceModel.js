@@ -1,5 +1,6 @@
 const { conn } = require('../config/conn');
 
+// Obtenemos las licencias disponibles en la bd
 const getLicences = async () => {
     try {
         const [rows] = await conn.query('SELECT * FROM licence;');
@@ -17,6 +18,7 @@ const getLicences = async () => {
     }
 };
 
+// Obtenemos una licencia específica según el id
 const getLicence = async (id) => {
     try {
         const [rows] = await conn.query('SELECT * FROM licence WHERE licence_id = ?', id);

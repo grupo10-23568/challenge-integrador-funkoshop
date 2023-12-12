@@ -2,6 +2,8 @@ const express = require('express');
 const shopControllers = require('../controllers/shopControllers');
 const router = express.Router();
 
+
+// Configuración de las rutas de la tienda (shop)
 router.get('/', shopControllers.shopView);
 router.get('/item/:id', shopControllers.itemView);
 router.post('/item/:id/add', shopControllers.addToCart);
