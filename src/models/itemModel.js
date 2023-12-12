@@ -1,5 +1,6 @@
 const { conn } = require('../config/conn');
 
+// Obtenemos todos los productos con la info de campos
 const getAll = async () => {
     try {
         const [rows] = await conn.query('SELECT product.*, category.category_name, licence.licence_name FROM (product LEFT JOIN category ON product.category_id = category.category_id) LEFT JOIN licence ON product.licence_id = licence.licence_id;');
@@ -21,6 +22,7 @@ const getAll = async () => {
     }
 }
 
+// Obtenemos un producto específico según los parámentros dados
 const getOne = async (params) => {
     try {
         const [rows] = await conn.query('SELECT product.*, category.category_name, licence.licence_name FROM (product LEFT JOIN category ON product.category_id = category.category_id) LEFT JOIN licence ON product.licence_id = licence.licence_id WHERE ?;', params);
@@ -42,6 +44,7 @@ const getOne = async (params) => {
     }
 }
 
+// Obtenemos un conjunto de productos según parámentros
 const getItem = async (params) => {
     try {
         const [rows] = await conn.query('SELECT product.*, category.category_name, licence.licence_name FROM (product LEFT JOIN category ON product.category_id = category.category_id) LEFT JOIN licence ON product.licence_id = licence.licence_id WHERE ?;', params);
@@ -59,6 +62,7 @@ const getItem = async (params) => {
     }
 };
 
+// Obtenemos todos los productos de un misma licencia
 const getAllItemsLicences = async (licence_id) => {
     try {
         const [rows] = await conn.query('SELECT * FROM product WHERE licence_id = ?', licence_id);
@@ -76,7 +80,7 @@ const getAllItemsLicences = async (licence_id) => {
     }
 }
 
-
+// Creamos un nuevo producto según parámetros dados
 const createItem = async (params) => {
     try {
         const [rows] = await conn.query('INSERT INTO product (product_name, product_description, price, stock, discount, sku, dues, image_front, image_back, licence_id, category_id) VALUES ?;', [params]);
@@ -95,6 +99,7 @@ const createItem = async (params) => {
     }
 };
 
+// Editamos un producto existente según parámetros dados
 const editItem = async (params, id) => {
     try {
         const [rows] = await conn.query('UPDATE product SET ? WHERE ?;', [params, id]);
@@ -114,6 +119,7 @@ const editItem = async (params, id) => {
     }
 };
 
+// Eliminamos un producto según parámetros dados
 const deleteItem = async (params) => {
     try {
         const [rows] = await conn.query('DELETE FROM product WHERE ?;', params);
@@ -132,7 +138,7 @@ const deleteItem = async (params) => {
     }
 };
 
-// Paginación de productos
+// Obtenemos paginación de productos segun parámetros dados
 const getPaginated = async (offset, limit) => {
     try {
         const [rows] = await conn.query(
@@ -159,6 +165,7 @@ const getPaginated = async (offset, limit) => {
     }
 };
 
+// Obtenemos el total de productos en la base de datos
 const getTotalItems = async () => {
     try {
         const [rows] = await conn.query('SELECT COUNT(*) AS total FROM product');
@@ -177,7 +184,7 @@ const getTotalItems = async () => {
 };
 
 
-// Pagina de carrito
+// Pagina de carrito: Actualización de la cantidad de un producto en el carrito
 const updateQuantity = async (productId, newQuantity) => {
     try {
         const [rows] = await conn.query('UPDATE product SET quantity = ? WHERE product_id = ?;', [newQuantity, productId]);
@@ -196,6 +203,7 @@ const updateQuantity = async (productId, newQuantity) => {
     }
 };
 
+// Eliminamos un producto del carrito
 const deleteCart = async (productId) => {
     try {
         const [rows] = await conn.query('DELETE FROM product WHERE product_id = ?;', [productId]);

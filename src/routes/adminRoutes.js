@@ -6,6 +6,7 @@ const adminControllers = require('../controllers/adminControllers');
 
 // router.use(isLogged);
 
+// Configuramos las rutas necesarias para las vistas de administración
 router.get('/', isLogged, adminControllers.adminView);
 router.get('/create', isLogged, adminControllers.createView);
 router.post('/create', isLogged, uploadFiles.array('images', 2), adminControllers.createItem);

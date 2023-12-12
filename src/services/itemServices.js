@@ -1,21 +1,25 @@
 const ItemModel = require('../models/itemModel');
 
+// Obtenemos todos los productos de la base de datos
 const getAllItems = async () => {
     return await ItemModel.getAll();
 }
 
+// Obtenemos los productos x su id
 const getOne = async (id) => {
     return await ItemModel.getOne({ product_id: id });
-}
-
-const getLicences = async (licence_id) => {
-    return await ItemModel.getLicences(licence_id);
 }
 
 const getItem = async (id) => {
     return await ItemModel.getItem({ product_id: id });
 }
 
+// Obtenemos los productos de una categoría (licencia)
+const getLicences = async (licence_id) => {
+    return await ItemModel.getLicences(licence_id);
+}
+
+// Crea un nuevo producto en la base de datos
 const createItem = async (item, files) => {
     const itemSchema = {
         product_name: item.name,
@@ -33,6 +37,7 @@ const createItem = async (item, files) => {
     return await ItemModel.createItem([Object.values(itemSchema)]);
 }
 
+// Edita un producto en la base de datos
 const editItem = async (item, files, id) => {
     const itemSchema = {
         product_name: item.name,
@@ -54,10 +59,13 @@ const editItem = async (item, files, id) => {
     return await ItemModel.editItem(itemSchema, { product_id: id });
 }
 
+// Elimina un producto de la base de datos
 const deleteItem = async (id) => {
     return await ItemModel.deleteItem({ product_id: id });
 }
 
+
+// Agrega producto al carrito
 const addToCart = async (productId, quantity) => {
     try {
         const [rows] = await conn.query('INSERT INTO cart (product_id, quantity, created_at) VALUES (?, ?, current_timestamp());', [productId, quantity]);
@@ -74,31 +82,6 @@ const addToCart = async (productId, quantity) => {
         return error;
     }
 }
-
-// Paginación de productos
-const getPaginated = async (page, limit) => {
-    try {
-        const totalItemsResponse = await ItemModel.getAll();
-        const totalItems = totalItemsResponse.data.length;
-
-        const totalPages = Math.ceil(totalItems / limit);
-
-        const offset = (page - 1) * limit;
-        const response = await ItemModel.getPaginated(offset, limit);
-
-        return {
-            isError: false,
-            data: response.data,
-            totalPages
-        };
-    } catch (error) {
-        console.error('Error en getPaginated:', error);
-        return {
-            isError: true,
-            message: 'Error al obtener datos paginados.'
-        };
-    }
-};
 
 // Servicio para actualizar la cantidad de un producto en el carrito
 const updateQuantity = async (productId, newQuantity) => {
@@ -137,6 +120,31 @@ const deleteCart = async (productId) => {
             message: `Error al eliminar el producto del carrito: ${error}`
         };
         return errorResponse;
+    }
+};
+
+// Configuramos la paginación de productos
+const getPaginated = async (page, limit) => {
+    try {
+        const totalItemsResponse = await ItemModel.getAll();
+        const totalItems = totalItemsResponse.data.length;
+
+        const totalPages = Math.ceil(totalItems / limit);
+
+        const offset = (page - 1) * limit;
+        const response = await ItemModel.getPaginated(offset, limit);
+
+        return {
+            isError: false,
+            data: response.data,
+            totalPages
+        };
+    } catch (error) {
+        console.error('Error en getPaginated:', error);
+        return {
+            isError: true,
+            message: 'Error al obtener datos paginados.'
+        };
     }
 };
 

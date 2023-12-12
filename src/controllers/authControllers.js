@@ -1,11 +1,14 @@
 // const { isLogged } = require('../middlewares/login');
 
+// Credenciales de usuario para administración
 const userCredentials = {
     email: 'admin@email.com',
     password: 'pass1234'
 }
 
+// Controladores relacionados con la autenticación (utilizada escritura alternativa)
 module.exports = {
+    // Muestra vista de login
     loginView: (req, res) => res.render('./auth/login', {
         view: {
             title: 'Login | Funkoshop'
@@ -27,6 +30,7 @@ module.exports = {
         return res.status(401).send('Credenciales inválidas');
     },
 
+    // Muestra vista de registro de usuarios
     registerView: (req, res) => res.render('./auth/register', {
         view: {
             title: 'Registro | Funkoshop'
@@ -35,6 +39,7 @@ module.exports = {
 
     registerUser: (req, res) => res.send('Route que recibe la data de registro de un usuario al clicar botón'),
 
+    // Cierra sesión del usuario y redirige a la página principal
     logoutUser: (req, res) => {
         req.session.isLogged = false;
         res.redirect('/home');
