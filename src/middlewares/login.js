@@ -5,7 +5,7 @@ const isLogged = (req, res, next) => {
     if (req.session.isLogged) {
         return next();
     }
-    // Si no lo está, devuelve estado 401 y mensaje
+    // Si no lo está, devuelve mensaje
     return res.status(401).send('Necesitas loguearte para ingresar');
 }
 
