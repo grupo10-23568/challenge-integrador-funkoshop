@@ -28,6 +28,11 @@
                     <li class="navbar__item"><a class="navbar__cart" href="/shop/cart"><img
                                 src="../../img/icons/cart-icon.svg" alt=""></a></li>
                 </ul>
+                <button class="navbar__burger" aria-label="Toggle Navigation">
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                </button>
             </nav>
             <% } else { %>
                 <nav class="navbar container">
@@ -51,8 +56,24 @@
                         <li class="navbar__item"><a class="navbar__cart" href="/shop/cart"><img
                                     src="../../img/icons/cart-icon.svg" alt=""></a></li>
                     </ul>
+                    <button class="navbar__burger" aria-label="Toggle Navigation">
+                        <span class="burger__line"></span>
+                        <span class="burger__line"></span>
+                        <span class="burger__line"></span>
+                    </button>
                 </nav>
                 <% } %>
 
     </header>
 </body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const burgerButton = document.querySelector('.navbar__burger');
+        const navbarMenu = document.querySelector('.navbar__menu');
+
+        burgerButton.addEventListener('click', function () {
+            navbarMenu.classList.toggle('active');
+        });
+    });
+</script>
