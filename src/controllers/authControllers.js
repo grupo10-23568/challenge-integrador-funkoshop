@@ -2,8 +2,8 @@
 
 // Credenciales de usuario para administración
 const userCredentials = {
-    email: 'admin@email.com',
-    password: 'pass1234'
+    email: process.env.USER_EMAIL,
+    password: process.env.USER_PASSWORD,
 }
 
 // Controladores relacionados con la autenticación (utilizada escritura alternativa)
