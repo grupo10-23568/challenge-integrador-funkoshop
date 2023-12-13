@@ -1,9 +1,7 @@
-// const { isLogged } = require('../middlewares/login');
-
-// Credenciales de usuario para administración
+// Declaramos las credenciales de acceso adminstración
 const userCredentials = {
     email: process.env.USER_EMAIL,
-    password: process.env.USER_PASSWORD,
+    password: process.env.USER_PASSWORD
 }
 
 // Controladores relacionados con la autenticación (utilizada escritura alternativa)
