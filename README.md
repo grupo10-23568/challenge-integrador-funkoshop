@@ -1,4 +1,4 @@
-# Challenge Integrador Funkoshop
+# Challenge Integrador Funkoshop Com#23568 / Grupo 10
 
 ![funkoshop-g10-23568 onrender com_home (1)](https://github.com/grupo10-23568/challenge-integrador-funkoshop/assets/146775217/11260e43-8080-49e7-af43-bbd2e011d033)
 
