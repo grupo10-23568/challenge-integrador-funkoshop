@@ -54,7 +54,7 @@
             <article class="col-lg-9 shop">
                 <ul class="row shop__items">
                     <% items.forEach(item=> { %>
-                        <li class="col-md-6 col-lg-4 shop__item">
+                        <li class="col-md-6 col-lg-4 shop__item" data-created-at="<%= item.create_time %>">
                             <article class="card-item">
                                 <a class="card-item__link" href="/shop/item/<%= item.product_id%>">
                                     <picture class="card-item__cover">

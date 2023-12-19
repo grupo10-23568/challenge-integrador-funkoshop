@@ -6,7 +6,7 @@
         <ul class="slider__items glide__slides">
 
             <% items.forEach(item=> { %>
-                <li class="slider__item glide__slides">
+                <li class="slider__item glide__slides" data-created-at="<%= item.create_time %>">
                     <article class="card-item">
                         <a class="card-item__link" href="/shop/item/<%= item.product_id%>">
                             <picture class="card-item__cover">

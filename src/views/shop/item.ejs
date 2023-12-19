@@ -2,8 +2,9 @@
 
     <main class="main-container container">
         <section class="items">
-            <article class="row items__content card-item">
+            <article class="row items__content card-item" data-created-at="<%= item.create_time %>">
                 <picture class="col-md-6 item__img card-item__cover">
+                    <span class="card-item__tag--items">NUEVO</span>
                     <img class="card-item__img--front" src="../../img/<%= item.image_front %>"
                         alt="<%= item.product_description %>">
                     <img class="card-item__img--back" src="../../img/<%= item.image_front %>"
