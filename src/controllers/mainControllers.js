@@ -4,20 +4,14 @@ const LicenceService = require('../services/licenceService');
 const ItemsService = require('../services/itemServices');
 
 const mainControllers = {
-    // Muestra la página principal de la aplicación
+    // Muestra la página principal de la aplicación con las licencias disponibles y el slider de Ultimos lanzamientos
     homeView: async (req, res) => {
         try {
-            // req.session.count = req.session.count ? ++req.session.count : 1;
-            // console.log(req.session.count);
-
-            // Obtiene todas las licencias disponibles
             const licences = await LicenceService.getAllItemsLicences();
 
-            // Obtiene todos los productos disponibles
-            const items = await ItemsService.getAllItems();
-            const { data: itemsData } = items;
+            // Obtenemos los productos con etiqueta 'nuevo'
+            const newItems = await ItemsService.getNewItems();
 
-            // Renderiza la vista principal con las licencias
             res.render('home', {
                 view: {
                     title: "Home | Funkoshop"
@@ -25,7 +19,7 @@ const mainControllers = {
                 collections: licences.data,
                 sliderTitle: 'Ultimos lanzamientos',
                 enableGlide: true,
-                items: itemsData,
+                items: newItems.data,
             });
         } catch (error) {
             console.error(error);
@@ -33,23 +27,21 @@ const mainControllers = {
         }
     },
 
-    // Define items para la vista de slider para la vista dinámica de los productos
     sliderView: async (req, res) => {
         try {
-            // Obtiene los productos
-            const items = await ItemsService.getAllItems();
-            const { data } = items;
+            // Obtenemos los productos con etiqueta 'nuevo' para el slider
+            const newItems = await ItemsService.getNewItems();
 
-            // Renderiza la vista del slider con los elementos dinámicos
             res.render('partials/sliders', {
                 view: {},
-                items: data
+                items: res.locals.newItems.data,
             });
         } catch (error) {
             console.error(error);
             res.status(500).send('Error al obtener elementos para el slider');
         }
     },
+
 
     // Muestra la vista de Contacto
     contactView: (req, res) => {

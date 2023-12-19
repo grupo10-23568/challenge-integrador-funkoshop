@@ -1,33 +1,32 @@
-// Filtrar items por fecha lanzamiento
-
+// Filtramos items por fecha lanzamiento
 document.addEventListener('DOMContentLoaded', () => {
     // Traemos todos los items de la tienda '.shop__item'
     const shopItems = document.querySelectorAll('.shop__item');
     const sliderItems = document.querySelectorAll('.slider__item');
 
-    // Función para verificar si un producto es nuevo
+    // Verificamos si un producto es nuevo
     const esNuevo = (fechaCreacion) => {
-        const mesEnMilisegundos = 30 * 24 * 60 * 60 * 1000; // Mes de 30 días
+        const mesEnMilisegundos = 30 * 24 * 60 * 60 * 1000; // 30 días
 
-        // Calcula la fecha actual menos un mes
+        // Calculamos la fecha actual menos un mes
         const haceUnMes = new Date() - mesEnMilisegundos;
 
-        // Compara la fecha de creación con la fecha actual menos un mes
+        // Comparamos la fecha de creación con la fecha actual menos un mes
         return new Date(fechaCreacion) > haceUnMes;
     };
 
-    // Función para mostrar u ocultar la etiqueta 'Nuevo'
+    // Mostramos u ocultarmos la etiqueta 'nuevo'
     const mostrarEtiquetaNuevo = (item) => {
         // Obtenemos la fecha de creación del atributo 'data-created-at'
         const fechaCreacion = item.getAttribute('data-created-at');
 
-        // Verifica si el producto es nuevo
+        // Verificamos si el producto es nuevo
         const nuevo = esNuevo(fechaCreacion);
 
-        // Traemos la etiqueta 'Nuevo'
+        // Traemos la etiqueta 'nuevo'
         const etiquetaNuevo = item.querySelector('.card-item__tag');
 
-        // Muestra u oculta la etiqueta 'Nuevo' según si el producto es nuevo o no
+        // Mostramos u ocultamos la etiqueta 'nuevo' según si el producto tiene -de 30 días o no
         if (nuevo) {
             etiquetaNuevo.style.display = 'block';
         } else {
@@ -35,12 +34,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Itera sobre cada elemento '.shop__item' y muestra u oculta la etiqueta 'Nuevo'
+    // Itera sobre cada elemento '.shop__item' y muestra u oculta la etiqueta 'nuevo'
     shopItems.forEach((shopItem) => {
         mostrarEtiquetaNuevo(shopItem);
     });
 
-    // Itera sobre cada elemento '.slider__item' y muestra u oculta la etiqueta 'Nuevo'
+    // Itera sobre cada elemento '.slider__item' y muestra u oculta la etiqueta 'nuevo'
     sliderItems.forEach((sliderItem) => {
         mostrarEtiquetaNuevo(sliderItem);
     });
@@ -51,18 +50,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // Traemos todos los elementos '.card-item'
     const items = document.querySelectorAll('.card-item');
 
-    // Función para verificar si un producto es nuevo
+    // Verificamos si un producto es nuevo
     const esNuevo = (fechaCreacion) => {
-        const mesEnMilisegundos = 30 * 24 * 60 * 60 * 1000; // Mes de 30 días
+        const mesEnMilisegundos = 30 * 24 * 60 * 60 * 1000; // 30 días
 
-        // Calcula la fecha actual menos un mes
+        // Calculamos la fecha actual menos un mes
         const haceUnMes = new Date() - mesEnMilisegundos;
 
-        // Compara la fecha de creación con la fecha actual menos un mes
+        // Comparamos la fecha de creación con la fecha actual menos un mes
         return new Date(fechaCreacion) > haceUnMes;
     };
 
-    // Función para aplicar la lógica de "NUEVO" a los elementos
+    // Aplicamos la lógica de 'nuevo' a los items
     const aplicarLogicaNuevo = (elementos) => {
         elementos.forEach((item) => {
             // Obtenemos la fecha de creación del atributo 'data-created-at'
@@ -71,10 +70,10 @@ document.addEventListener('DOMContentLoaded', () => {
             // Verifica si el producto es nuevo
             const nuevo = esNuevo(fechaCreacion);
 
-            // Traemos la etiqueta 'NUEVO'
+            // Traemos la etiqueta 'nuevo'
             const etiquetaNuevo = item.querySelector('.card-item__tag--items');
 
-            // Muestra u oculta la etiqueta 'NUEVO' según si el producto es nuevo o no
+            // Muestramos u ocultamos la etiqueta 'nuevo' según lo sea o no
             if (nuevo) {
                 etiquetaNuevo.style.display = 'block';
             } else {
@@ -83,6 +82,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Aplicamos la lógica de "NUEVO" a los elementos '.card-item'
     aplicarLogicaNuevo(items);
 });

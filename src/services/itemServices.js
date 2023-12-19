@@ -19,7 +19,39 @@ const getLicences = async (licence_id) => {
     return await ItemModel.getLicences(licence_id);
 }
 
-// Crea un nuevo producto en la base de datos
+// Obtenemos los productos nuevos basados en la fecha de creación para mostrar en slider /home
+const getNewItems = async () => {
+    try {
+        const allItems = await ItemModel.getAll();
+
+        // Filtra los productos para obtener solo los que son 'nuevos'
+        const newItems = allItems.data.filter(item => esNuevo(item.create_time));
+
+        return {
+            isError: false,
+            data: newItems
+        };
+    } catch (error) {
+        console.error('Error en getNewItems:', error);
+        return {
+            isError: true,
+            message: 'Error al obtener productos nuevos.'
+        };
+    }
+};
+
+// Establecemos cuándo un producto será 'nuevo'
+const esNuevo = (fechaCreacion) => {
+    const mesEnMilisegundos = 30 * 24 * 60 * 60 * 1000; // 30 días
+
+    // Calculamos la fecha actual menos un mes
+    const haceUnMes = new Date() - mesEnMilisegundos;
+
+    // Comparamos la fecha de creación con la fecha actual menos un mes
+    return new Date(fechaCreacion) > haceUnMes;
+};
+
+// Creamos un nuevo producto en la base de datos
 const createItem = async (item, files) => {
     const itemSchema = {
         product_name: item.name,
@@ -37,7 +69,7 @@ const createItem = async (item, files) => {
     return await ItemModel.createItem([Object.values(itemSchema)]);
 }
 
-// Edita un producto en la base de datos
+// Editamos un producto en la base de datos
 const editItem = async (item, files, id) => {
     const itemSchema = {
         product_name: item.name,
@@ -59,13 +91,13 @@ const editItem = async (item, files, id) => {
     return await ItemModel.editItem(itemSchema, { product_id: id });
 }
 
-// Elimina un producto de la base de datos
+// Eliminamos un producto de la base de datos
 const deleteItem = async (id) => {
     return await ItemModel.deleteItem({ product_id: id });
 }
 
 
-// Agrega producto al carrito
+// Agregamos producto al carrito
 const addToCart = async (productId, quantity) => {
     try {
         const [rows] = await conn.query('INSERT INTO cart (product_id, quantity, created_at) VALUES (?, ?, current_timestamp());', [productId, quantity]);
@@ -83,7 +115,7 @@ const addToCart = async (productId, quantity) => {
     }
 }
 
-// Servicio para actualizar la cantidad de un producto en el carrito
+// Actualizamos la cantidad de un producto en el carrito
 const updateQuantity = async (productId, newQuantity) => {
     try {
         // Lógica para actualizar la cantidad en la base de datos
@@ -102,12 +134,10 @@ const updateQuantity = async (productId, newQuantity) => {
     }
 };
 
-// Servicio para eliminar un producto del carrito
+// Eliminamos un producto del carrito
 const deleteCart = async (productId) => {
     try {
-        // Elimina el producto del carrito en la base de datos
-
-        // Lógica para eliminar el producto del carrito en la base de datos
+        // Eliminamos el producto del carrito en la base de datos
         await ItemModel.deleteCart(productId);
         const response = {
             isError: false,
@@ -160,4 +190,5 @@ module.exports = {
     updateQuantity,
     deleteCart,
     addToCart,
+    getNewItems,
 };
