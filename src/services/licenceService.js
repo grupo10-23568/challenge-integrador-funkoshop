@@ -7,7 +7,7 @@ const getAllItemsLicences = async () => {
 
 // Obtenemos la licencia de un producto por su id
 const getLicence = async (id) => {
-    return await licenceModel.getLicence(id);
+    return await LicenceModel.getLicence(id);
 };
 
 
