@@ -1,23 +1,44 @@
 const ItemsService = require('../services/itemServices');
+const itemModel = require('../models/itemModel');
+const licenceServices = require('../services/licenceService');
 
 const shopControllers = {
-    // Muestra la vista principal de la tienda con paginación de productos
     shopView: async (req, res) => {
         try {
+            // Definimos los parámetro para la paginación
             const { page = 1, limit = 9 } = req.query;
 
-            // Obtener los datos paginados
-            const paginatedItems = await ItemsService.getPaginated(page, limit);
-            const { data, totalPages } = paginatedItems;
+            let items; // Variable que almacena la cantidad de productos
+            let totalPages; // Variable para almacenar el número total de páginas
 
+            // Obtener la licencia seleccionada desde /home
+            const selectedLicence = req.query.licence;
+
+            if (selectedLicence) {
+                // Si hay una licencia seleccionada, obtener productos filtrados por licencia
+                const licencedItems = await itemModel.getAllItemsLicences(selectedLicence);
+                items = licencedItems.data;
+            } else {
+                // Si no hay licencia seleccionada, obtener datos paginados de todos los productos
+                const paginatedItems = await ItemsService.getPaginated(page, limit);
+                items = paginatedItems.data;
+                totalPages = paginatedItems.totalPages;
+            }
+
+            // Obtener todas las licencias para mostrar en el formulario de búsqueda
+            const licences = await licenceServices.getAllItemsLicences();
+
+            // Renderizar la página con los todos los productos y x licencia
             res.render('../views/shop/shop', {
                 view: {
                     title: "Shop | Funkoshop"
                 },
-                items: data,
-                totalPages,
+                items,
+                licences: licences.data,
+                totalPages: totalPages || 1,
                 currentPage: parseInt(page),
             });
+
         } catch (error) {
             console.error('Error en shopView:', error);
             res.status(500).send('Error interno del servidor');
