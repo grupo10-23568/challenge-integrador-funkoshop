@@ -58,8 +58,8 @@
                                         </a>
                                     </td>
                                     <td>
-                                        <form action="/admin/delete/<%= item.product_id %>?_method=DELETE"
-                                            method="POST">
+                                        <form action="/admin/delete/<%= item.product_id %>?_method=DELETE" method="POST"
+                                            onsubmit="return confirm('¿Estás seguro de que deseas eliminar este ítem?')">
                                             <button class="btn__borrar--item" type="submit">
                                                 <iconify-icon class="td__icon--delete"
                                                     icon="material-symbols:delete"></iconify-icon>
