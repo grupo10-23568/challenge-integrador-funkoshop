@@ -142,7 +142,7 @@ const deleteItem = async (params) => {
 const getPaginated = async (offset, limit) => {
     try {
         const [rows] = await conn.query(
-            'SELECT product.*, category.category_name, licence.licence_name ' +
+            'SELECT product.*, category.category_name, licence.licence_name, product.create_time ' +
             'FROM (product LEFT JOIN category ON product.category_id = category.category_id) ' +
             'LEFT JOIN licence ON product.licence_id = licence.licence_id ' +
             'LIMIT ?, ?;',
