@@ -7,6 +7,17 @@
     margin: var(--spacing-68) 0;
 }
 
+.card-item__tag--items {
+    color: var(--blanco);
+    background-color: var(--rojo);
+    font-size: var(--font-18-medium);
+    padding: 5px var(--spacing-24);
+    position: absolute;
+    left: var(--spacing-20);
+    top: var(--spacing-68);
+}
+
+
 .items img {
     width: 100%;
 }

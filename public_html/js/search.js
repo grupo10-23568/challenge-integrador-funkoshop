@@ -1,7 +1,6 @@
 // Busqueda por nombre o licencia
 document.addEventListener('DOMContentLoaded', () => {
     const searchForm = document.getElementById('search-form');
-    const searchResults = document.getElementById('search-results');
     const items = document.querySelectorAll('.shop__item');
     const searchInput = searchForm.querySelector('input[name="buscar"]');
 
@@ -24,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Busqueda automatica en Listado de productos
 document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector('.form__admin');
     const input = document.querySelector('.search__input');
     const tableRows = document.querySelectorAll('.listado_products tbody tr');
 
