@@ -3,7 +3,7 @@
         <h2 class="createdit__title">EDITAR ITEM</h2>
 
         <form class="createdit__form" action="/admin/edit/<%= item.product_id %>?_method=PUT" method="POST"
-            enctype="application/x-www-form-urlencoded">
+            enctype="application/x-www-form-urlencoded" onsubmit="alert('¡Ítem modificado exitosamente!')">
             <article class="form__cat-lic">
                 <div class="form__item">
                     <label class="form__label" for="category">Categoría:</label>
