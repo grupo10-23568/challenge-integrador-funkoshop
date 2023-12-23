@@ -81,23 +81,23 @@ Nuestro equipo siguió un proceso de desarrollo estructurado. En reuniones seman
 │   └── /licenceServices.js
 ├── /utils
 │   └── /session.js
-├── /views
-│   ├── /contact.ejs
-│   ├── /home.ejs
-│   ├── /admin
-│   │   ├── /admin.ejs
-│   │   ├── /create.ejs
-│   │   └── /edit.ejs
-│   ├── /auth
-│   │   ├── /login.ejs
-│   │   └── /register.ejs
-│   ├── /partials
-│   │   ├── /card.ejs
-│   │   ├── /footer.ejs
-│   │   ├── /header.ejs
-│   │   └── /sliders.ejs
-│   └── /shop
-│       ├── /cart.ejs
-│       ├── /item.ejs
-│       └── /shop.ejs 
+└── /views
+    ├── /contact.ejs
+    ├── /home.ejs
+    ├── /admin
+    │   ├── /admin.ejs
+    │   ├── /create.ejs
+    │   └── /edit.ejs
+    ├── /auth
+    │   ├── /login.ejs
+    │   └── /register.ejs
+    ├── /partials
+    │   ├── /card.ejs
+    │   ├── /footer.ejs
+    │   ├── /header.ejs
+    │   └── /sliders.ejs
+    └── /shop
+        ├── /cart.ejs
+        ├── /item.ejs
+        └── /shop.ejs
 ```
